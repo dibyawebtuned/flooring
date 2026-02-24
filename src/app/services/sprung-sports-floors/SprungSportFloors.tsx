@@ -18,7 +18,6 @@ const SprungSportFloors = () => {
                 description="Engineered for performance and safety, sprung sports floors deliver superior shock absorption and durability for gyms, sports halls, and athletic facilities. Our expertly installed systems enhance player comfort, reduce injury risk, and meet professional sporting standards for long-term performance."
             />
 
-
             <section className='max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-20 py-8 md:py-12'>
                 <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10'>
 
@@ -146,6 +145,7 @@ const SprungSportFloors = () => {
                                 <nav>
                                     <ul className='space-y-3 sm:space-y-2'>
                                         {[
+                                            { name: "Solid Timber Flooring", link: "/services/solid-timber-flooring" },
                                             { name: "Floor Sanding & Polishing", link: "/services/floor-sanding-polishing" },
                                             { name: "Floor Preparation & Levelling", link: "/services/floor-preparation-levelling" },
                                             { name: "Flooring Maintenance", link: "/services/flooring-maintenance" },
@@ -158,7 +158,7 @@ const SprungSportFloors = () => {
                                             { name: "Blackbutt Timber Floors", link: "/services/blackbutt-timber-floors" },
                                             { name: "Limewashing", link: "/services/limewashing" },
                                             { name: "Hybrid Flooring", link: "/services/hybrid-flooring" },
-                                            { name: "Sprung Sports Floors", link: "/services/sprung-sports-floors" },
+                                            // { name: "Sprung Sports Floors", link: "/services/sprung-sports-floors" },
                                         ].map((service) => (
                                             <li key={service.name}>
                                                 <Link

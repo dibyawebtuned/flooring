@@ -142,12 +142,13 @@ const LaminateComponent = () => {
                                 <nav>
                                     <ul className='space-y-3 sm:space-y-2'>
                                         {[
+                                            { name: "Solid Timber Flooring", link: "/services/solid-timber-flooring" },
                                             { name: "Floor Sanding & Polishing", link: "/services/floor-sanding-polishing" },
                                             { name: "Floor Preparation & Levelling", link: "/services/floor-preparation-levelling" },
                                             { name: "Flooring Maintenance", link: "/services/flooring-maintenance" },
                                             { name: "Floor Staining", link: "/services/floor-staining" },
                                             { name: "Floating Floor", link: "/services/floating-floor" },
-                                            { name: "Laminate", link: "/services/laminate-flooring" },
+                                            // { name: "Laminate", link: "/services/laminate-flooring" },
                                             { name: "Parquetry", link: "/services/parquetry" },
                                             { name: "Decking", link: "/services/decking" },
                                             { name: "Noise Reduction", link: "/services/noise-reduction" },

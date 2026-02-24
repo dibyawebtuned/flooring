@@ -143,6 +143,7 @@ const NoiseReductionComponent = () => {
                                 <nav>
                                     <ul className='space-y-3 sm:space-y-2'>
                                         {[
+                                            { name: "Solid Timber Flooring", link: "/services/solid-timber-flooring" },
                                             { name: "Floor Sanding & Polishing", link: "/services/floor-sanding-polishing" },
                                             { name: "Floor Preparation & Levelling", link: "/services/floor-preparation-levelling" },
                                             { name: "Flooring Maintenance", link: "/services/flooring-maintenance" },
@@ -151,7 +152,7 @@ const NoiseReductionComponent = () => {
                                             { name: "Laminate", link: "/services/laminate-flooring" },
                                             { name: "Parquetry", link: "/services/parquetry" },
                                             { name: "Decking", link: "/services/decking" },
-                                            { name: "Noise Reduction", link: "/services/noise-reduction" },
+                                            // { name: "Noise Reduction", link: "/services/noise-reduction" },
                                             { name: "Blackbutt Timber Floors", link: "/services/blackbutt-timber-floors" },
                                             { name: "Limewashing", link: "/services/limewashing" },
                                             { name: "Hybrid Flooring", link: "/services/hybrid-flooring" },
