@@ -1,15 +1,13 @@
-import React from 'react'
-import Link from 'next/link';
-import Image from 'next/image';
-import HeroBanner from '@/components/ui/HeroBanner'
-import MarqueeSection from '@/components/ui/Marquee';
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import HeroBanner from "@/components/ui/HeroBanner";
+import MarqueeSection from "@/components/ui/Marquee";
 import Banner_Image from "../../../public/assets/img/bannerimage1.webp";
 import Banner_Image_Two from "../../../public/assets/img/bannerimage2.jpg";
 import Image_One from "../../../public/assets/img/bannerimage3.webp";
 import { FaHeadset } from "react-icons/fa";
-
 import { Lightbulb, Wrench, Settings } from "lucide-react";
-
 
 const AboutComponent = () => {
     return (
@@ -26,168 +24,142 @@ const AboutComponent = () => {
             />
 
             <section>
-                <div className='max-w-[1440px] mx-auto px-20 py-[50px] flex flex-col gap-[40px]'>
+                {/* Experience Section */}
+                <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-20 py-12 sm:py-16 flex flex-col gap-12">
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-
-                        {/* Left Column */}
                         <div className="md:col-span-4">
-                            <span className="font-inter uppercase text-[14px] inter-600 text-[#111111]/80">
+                            <span className="uppercase text-sm font-semibold text-[#111]/70">
                                 Our experience
                             </span>
                         </div>
 
-                        {/* Right Column */}
                         <div className="md:col-span-8 flex flex-col gap-6">
-
-                            <p className="space-grotesk space-grotesk-500 text-[28px] md:text-[34px] leading-9 md:leading-10">
-                                We specialize in providing top-quality flooring services tailored to your home needs.
+                            <p className="text-2xl sm:text-3xl md:text-[34px] leading-snug">
+                                We specialize in providing top-quality flooring services
+                                tailored to your home needs.
                             </p>
 
                             <div className="flex items-center gap-4">
-                                <div className="bg-[#111111]/80 w-[50px] h-[50px] rounded-full flex items-center justify-center">
-                                    <FaHeadset className="text-white w-[20px] h-[20px]" />
+                                <div className="bg-[#111]/90 w-12 h-12 rounded-full flex items-center justify-center">
+                                    <FaHeadset className="text-white w-5 h-5" />
                                 </div>
 
                                 <div className="flex flex-col">
-                                    <span className="text-[14px] font-inter inter-500 text-[#111111]/80">
+                                    <span className="text-sm text-[#111]/70">
                                         Call Us Anytime
                                     </span>
-
-                                    <Link
-                                        href="tel:0414645200"
-                                        className="text-[18px] space-grotesk space-grotesk-600 hover:underline"
-                                    >
+                                    <Link href="tel:0414645200" className="text-lg font-semibold hover:underline">
                                         0414 645 200
                                     </Link>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
-
-                    <div className='flex gap-[20px] '>
-                        <div className='flex-1 h-[300px] rounded-[10px] overflow-hidden relative'>
-                            <Image
-                                src={Banner_Image}
-                                alt=""
-                                fill
-                                className="object-cover" />
+                    {/* Image Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className="relative w-full h-[220px] sm:h-[260px] lg:h-[300px] rounded-xl overflow-hidden">
+                            <Image src={Banner_Image} alt="Flooring project" fill className="object-cover transition-transform duration-500 hover:scale-105"
+                            />
                         </div>
 
-                        <div className='flex-1 h-[300px] rounded-[10px] overflow-hidden bg-[#111111]/80'>
-                            <div className='flex flex-col justify-between p-5 h-[290px]'>
-                                <div>
-                                    <span className='text-[42px] space-grotesk space-grotesk-500 text-[#F6F4EF]'>100+</span>
-                                </div>
-
-                                <div>
-                                    <p className='border-t border-[#F6F4EF] text-[#F6F4EF] pt-5 text-[20px] leading-5.5 space-grotesk space-grotesk-500'>
-                                        Professional and experienced ready to help you
-                                    </p>
-                                </div>
-                            </div>
+                        <div className="rounded-xl bg-[#111]/90 flex flex-col justify-between p-6 text-white">
+                            <span className="text-4xl font-semibold">100+</span>
+                            <p className="border-t border-white/50 pt-4 text-lg leading-snug">
+                                Professional and experienced ready to help you
+                            </p>
                         </div>
 
-                        <div className="flex-1 h-[300px] rounded-[10px] overflow-hidden relative">
+                        <div className="relative w-full h-[220px] sm:h-[260px] lg:h-[300px] rounded-xl overflow-hidden">
                             <Image
                                 src={Banner_Image_Two}
-                                alt="Banner"
+                                alt="Timber flooring"
                                 fill
-                                className="object-cover"
+                                className="object-cover transition-transform duration-500 hover:scale-105"
                             />
                         </div>
                     </div>
                 </div>
 
-                {/*  */}
-                <div className="bg-[#F6F4EF] py-24">
-                    <div className="max-w-[1440px] mx-auto px-[80px]">
-                        {/* Timeline container */}
+                {/* Timeline Section */}
+                <div className="bg-[#F6F4EF] py-20 sm:py-24">
+                    <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-20">
                         <div className="relative">
-                            {/* Vertical line */}
-                            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-[2px] bg-[#111111]/80"></div>
+                            {/* Vertical Line */}
+                            <div className="absolute left-4 sm:left-1/2 sm:-translate-x-1/2 h-full w-[2px] bg-[#111]/80"></div>
 
-                            {/* Dot at top */}
-                            <div className="absolute left-1/2 transform -translate-x-1/2 top-0 w-4 h-4 rounded-full bg-[#111111]"></div>
-
-                            {/* Row 1 */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
-                                <div className="text-left pr-10">
-                                    <div className="w-14 h-14 rounded-full bg-[#111111]/80 flex items-center justify-center mb-4">
+                            {/* Timeline Item 1 */}
+                            <div className="relative grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+                                <div className="pl-12 sm:pl-0 sm:pr-10">
+                                    <div className="w-14 h-14 rounded-full bg-[#111]/90 flex items-center justify-center mb-4">
                                         <Lightbulb className="text-white w-6 h-6" />
                                     </div>
-                                    <h2 className="text-3xl font-semibold text-gray-900 mb-4">
+                                    <h2 className="text-2xl sm:text-3xl font-semibold mb-4">
                                         Get professional advice
                                     </h2>
-                                    <p className="text-gray-600 leading-relaxed ">
-                                        Lorem ipsum dolor sit amet consectetur. Eu lacus sed enim urna quisque mattis.
-                                        Nullam quisque justo in aliquet. Ullamcorper cursus varius Lorem ipsum dolor sit
-                                        amet Lorem ipsum dolor sit amet consectetur.
+                                    <p className="text-gray-600 leading-relaxed">
+                                        Our experts assess your space and provide tailored flooring
+                                        solutions suited to your style and budget.
                                     </p>
                                 </div>
 
-                                <div className="rounded-2xl overflow-hidden shadow-lg">
+                                <div className="relative w-full h-[220px] sm:h-64 rounded-xl overflow-hidden shadow-lg">
                                     <Image
                                         src={Banner_Image}
-                                        alt="Service"
-                                        className="w-full h-64 object-cover"
+                                        alt="Professional advice"
+                                        fill
+                                        className="object-cover"
                                     />
                                 </div>
                             </div>
 
-                            {/* Middle Dot */}
-                            <div className="absolute left-1/2 transform -translate-x-1/2 top-1/2 w-4 h-4 rounded-full bg-[#111111]"></div>
-
-                            {/* Row 2 */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
-                                <div className="rounded-2xl overflow-hidden shadow-lg md:order-1 order-2">
+                            {/* Timeline Item 2 */}
+                            <div className="relative grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+                                <div className="relative w-full h-[220px] sm:h-64 rounded-xl overflow-hidden shadow-lg md:order-1 order-2">
                                     <Image
                                         src={Banner_Image_Two}
-                                        alt="Handyman"
-                                        className="w-full h-64 object-cover"
+                                        alt="Expert team"
+                                        fill
+                                        className="object-cover"
                                     />
                                 </div>
 
-                                <div className="text-left pl-10 md:order-2 order-1">
-                                    <div className="w-14 h-14 rounded-full bg-[#111111]/80 flex items-center justify-center mb-4">
-                                        <Settings className="text-white w-6 h-6 stroke-[1.5]" />
+                                <div className="pl-12 sm:pl-0 md:order-2 order-1">
+                                    <div className="w-14 h-14 rounded-full bg-[#111]/90 flex items-center justify-center mb-4">
+                                        <Settings className="text-white w-6 h-6" />
                                     </div>
-                                    <h2 className="text-3xl font-semibold text-gray-900 mb-4">
+                                    <h2 className="text-2xl sm:text-3xl font-semibold mb-4">
                                         Meet your handyman expert
                                     </h2>
                                     <p className="text-gray-600 leading-relaxed">
-                                        Lorem ipsum dolor sit amet consectetur. Eu lacus sed enim urna quisque mattis.
-                                        Nullam quisque justo in aliquet. Ullamcorper cursus varius Lorem ipsum dolor sit
-                                        amet Lorem ipsum dolor sit amet consectetur.
+                                        Our skilled flooring specialists ensure precise
+                                        installation and flawless finishes every time.
                                     </p>
                                 </div>
                             </div>
 
-                            {/* Bottom Dot */}
-                            <div className="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-4 h-4 rounded-full bg-[#111111]"></div>
-
-                            {/* Row 3 */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                                <div className="text-left pr-10">
-                                    <div className="w-14 h-14 rounded-full bg-[#111111]/80 flex items-center justify-center mb-4">
-                                        <Wrench className="text-white w-6 h-6 stroke-[1.5]" />
+                            {/* Timeline Item 3 */}
+                            <div className="relative grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                                <div className="pl-12 sm:pl-0 sm:pr-10">
+                                    <div className="w-14 h-14 rounded-full bg-[#111]/90 flex items-center justify-center mb-4">
+                                        <Wrench className="text-white w-6 h-6" />
                                     </div>
-                                    <h2 className="text-3xl font-semibold text-gray-900 mb-4">
-                                        Get best our services at door
+                                    <h2 className="text-2xl sm:text-3xl font-semibold mb-4">
+                                        Get the best services at your door
                                     </h2>
                                     <p className="text-gray-600 leading-relaxed">
-                                        Lorem ipsum dolor sit amet consectetur. Eu lacus sed enim urna quisque mattis.
-                                        Nullam quisque justo in aliquet. Ullamcorper cursus varius Lorem ipsum dolor sit
-                                        amet Lorem ipsum dolor sit amet consectetur.
+                                        From consultation to installation, we deliver premium
+                                        timber flooring solutions directly to your home or
+                                        commercial space.
                                     </p>
                                 </div>
 
-                                <div className="rounded-2xl overflow-hidden shadow-lg">
+                                <div className="relative w-full h-[220px] sm:h-64 rounded-xl overflow-hidden shadow-lg">
                                     <Image
                                         src={Image_One}
-                                        alt="Service at door"
-                                        className="w-full h-64 object-cover"
+                                        alt="Service delivery"
+                                        fill
+                                        className="object-cover"
                                     />
                                 </div>
                             </div>
@@ -199,7 +171,7 @@ const AboutComponent = () => {
                 <MarqueeSection />
             </section>
         </div>
-    )
-}
+    );
+};
 
-export default AboutComponent
+export default AboutComponent;

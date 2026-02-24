@@ -1,4 +1,5 @@
 import React from 'react'
+import ParallaxFeatures from '@/components/ui/AboutEffect'
 
 const About = () => {
     return (
@@ -35,6 +36,10 @@ const About = () => {
                         maintaining existing floors, Prestige Flooring combines expertise, quality materials.
                     </p>
                 </div>
+            </div>
+
+            <div>
+<ParallaxFeatures/>
             </div>
         </div>
     )

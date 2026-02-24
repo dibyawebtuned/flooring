@@ -5,7 +5,6 @@ import Image_One from "../../public/assets/img/1.jpeg";
 const Project = () => {
     return (
         <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-20 py-12 sm:py-16 lg:py-20">
-
             {/* Header Section */}
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-20 mb-12">
                 <div className="flex-1">
@@ -23,33 +22,32 @@ const Project = () => {
 
             {/* Masonry Gallery */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-
                 {/* Column 1 */}
                 <div className="grid gap-4">
-                    <img className="h-auto max-w-full rounded-md" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="Project 1" />
-                    <img className="h-auto max-w-full rounded-md" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="Project 2" />
-                    <img className="h-auto max-w-full rounded-md" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="Project 3" />
+                    <Image className="h-auto max-w-full rounded-md" src={Image_One} alt="Project 1" />
+                    <Image className="h-auto max-w-full rounded-md" src={Image_One} alt="Project 2" />
+                    <Image className="h-auto max-w-full rounded-md" src={Image_One} alt="Project 3" />
                 </div>
 
                 {/* Column 2 */}
                 <div className="grid gap-4">
-                    <img className="h-auto max-w-full rounded-md" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="Project 4" />
-                    <img className="h-auto max-w-full rounded-md" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="Project 5" />
-                    <img className="h-auto max-w-full rounded-md" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="Project 6" />
+                    <Image className="h-auto max-w-full rounded-md" src={Image_One} alt="Project 4" />
+                    <Image className="h-auto max-w-full rounded-md" src={Image_One} alt="Project 5" />
+                    <Image className="h-auto max-w-full rounded-md" src={Image_One} alt="Project 6" />
                 </div>
 
                 {/* Column 3 */}
                 <div className="grid gap-4">
-                    <img className="h-auto max-w-full rounded-md" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="Project 7" />
-                    <img className="h-auto max-w-full rounded-md" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="Project 8" />
-                    <img className="h-auto max-w-full rounded-md" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="Project 9" />
+                    <Image className="h-auto max-w-full rounded-md" src={Image_One} alt="Project 7" />
+                    <Image className="h-auto max-w-full rounded-md" src={Image_One} alt="Project 8" />
+                    <Image className="h-auto max-w-full rounded-md" src={Image_One} alt="Project 9" />
                 </div>
 
                 {/* Column 4 */}
                 <div className="grid gap-4">
-                    <img className="h-auto max-w-full rounded-md" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="Project 10" />
-                    <img className="h-auto max-w-full rounded-md" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="Project 11" />
-                    <img className="h-auto max-w-full rounded-md" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="Project 12" />
+                    <Image className="h-auto max-w-full rounded-md" src={Image_One} alt="Project 10" />
+                    <Image className="h-auto max-w-full rounded-md" src={Image_One} alt="Project 11" />
+                    <Image className="h-auto max-w-full rounded-md" src={Image_One} alt="Project 12" />
                 </div>
 
             </div>

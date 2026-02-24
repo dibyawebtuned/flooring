@@ -63,33 +63,19 @@ const Hero = () => {
 
             {/* STATIC Text Content */}
             <div className="relative z-10 flex flex-col items-center justify-end h-full px-4 sm:px-6 lg:px-8 text-white">
-
-                <div className="w-full max-w-[1440px] mx-auto 
-                                px-4 sm:px-6 md:px-10 lg:px-[80px] 
-                                flex flex-col lg:flex-row">
+                <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 lg:px-[80px] flex flex-col lg:flex-row">
 
                     <div className="flex-2 pb-8 sm:pb-10 lg:pb-[50px]">
 
-                        <div className="text-start font-inter 
-                                        text-sm sm:text-base 
-                                        font-medium text-[#F6F4EF] 
-                                        mb-2 sm:mb-[10px]">
+                        <div className="text-start font-inter text-sm sm:text-base font-medium text-[#F6F4EF] mb-2 sm:mb-[10px]">
                             Highest quality timber floors and timber flooring installation
                         </div>
 
-                        <h1 className="space-grotesk space-grotesk-500 
-                                       text-start text-[#F6F4EF] 
-                                       text-3xl sm:text-4xl md:text-5xl lg:text-[61px]
-                                       leading-tight sm:leading-tight md:leading-tight lg:leading-[65px]
-                                       mb-3 sm:mb-[10px]">
-                            Welcome to Sydney's quality leader in timber floors.
+                        <h1 className="space-grotesk space-grotesk-500 text-start text-[#F6F4EF] text-3xl sm:text-4xl md:text-5xl lg:text-[61px] leading-tight sm:leading-tight md:leading-tight lg:leading-[65px] mb-3 sm:mb-[10px]">
+                            {`Welcome to Sydney's quality leader in timber floors.`}
                         </h1>
 
-                        <p className="text-start text-[#E6E0D6] 
-                                      text-sm sm:text-base 
-                                      font-medium 
-                                      max-w-full sm:max-w-xl lg:max-w-2xl 
-                                      mb-5 sm:mb-[20px]">
+                        <p className="text-start text-[#E6E0D6]  text-sm sm:text-base font-medium max-w-full sm:max-w-xl lg:max-w-2xl mb-5 sm:mb-[20px]">
                             With over 20 years of experience, we specialise exclusively in timber flooring—delivering A1-class
                             workmanship, premium materials, and outstanding customer service across Sydney.
                         </p>
@@ -113,10 +99,7 @@ const Hero = () => {
             {/* Navigation */}
             <button
                 onClick={prevSlide}
-                className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 z-20 
-                           p-2 text-white/70 hover:text-white 
-                           bg-black/20 hover:bg-black/40 rounded-full transition-all"
-            >
+                className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white/70 hover:text-white bg-black/20 hover:bg-black/40 rounded-full transition-all">
                 <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8" />
             </button>
 
