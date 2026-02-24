@@ -154,7 +154,7 @@ export default function Navbar() {
                                     </div>
                                 </Link>
 
-                                <Link href="/services/floor-sanding-polishing" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
+                                <Link href="/services/decking" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
                                     <div className="pt-2">
                                         <Grid2x2 className="w-5 h-5 text-[#111111] shrink-0" />
                                     </div>
@@ -168,7 +168,7 @@ export default function Navbar() {
                                     </div>
                                 </Link>
 
-                                <Link href="/services/floor-sanding-polishing" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
+                                <Link href="/services/noise-reduction" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
                                     <div className="pt-2">
                                         <Volume2 className="w-5 h-5 text-[#111111] shrink-0" />
                                     </div>
@@ -182,7 +182,7 @@ export default function Navbar() {
                                     </div>
                                 </Link>
 
-                                <Link href="/services/floor-sanding-polishing" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
+                                <Link href="/services/blackbutt-timber-floors" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
                                     <div className="pt-2">
                                         <Trees className="w-5 h-5 text-[#111111] shrink-0" />
                                     </div>
@@ -196,7 +196,7 @@ export default function Navbar() {
                                     </div>
                                 </Link>
 
-                                <Link href="/services/floor-sanding-polishing" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
+                                <Link href="/services/limewashing" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
                                     <div className="pt-2">
                                         <Brush className="w-5 h-5 text-[#111111] shrink-0" />
                                     </div>
@@ -210,7 +210,7 @@ export default function Navbar() {
                                     </div>
                                 </Link>
 
-                                <Link href="/services/floor-sanding-polishing" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
+                                <Link href="/services/hybrid-flooring" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
                                     <div className="pt-2">
                                         <Layers3 className="w-5 h-5 text-[#111111] shrink-0" />
                                     </div>
@@ -224,7 +224,7 @@ export default function Navbar() {
                                     </div>
                                 </Link>
 
-                                <Link href="/services/floor-sanding-polishing" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
+                                <Link href="/services/sprung-sports-floors" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
                                     <div className="pt-2">
                                         <Trophy className="w-5 h-5 text-[#111111] shrink-0" />
                                     </div>
