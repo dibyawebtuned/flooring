@@ -7,6 +7,7 @@ import Image_One from "../../../../public/assets/img/8.jpeg";
 import Image_Two from "../../../../public/assets/img/7.jpeg";
 import { ClipboardCheck, ClipboardList, Wrench, Phone } from "lucide-react";
 
+
 const SolidTimberComponent = () => {
   return (
     <div>

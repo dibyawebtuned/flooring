@@ -23,7 +23,6 @@ export default function Navbar() {
                 {/* Navigation */}
                 <nav className="hidden lg:flex items-center gap-8 text-[16px] text-[#F6F4EF] relative">
                     <Link href="/">Home</Link>
-
                     {/* Services Dropdown */}
                     <div className="relative group"
                         onMouseEnter={() => setOpen(true)}
@@ -83,7 +82,7 @@ export default function Navbar() {
                                     </div>
                                 </Link>
 
-                                <Link href="/services/floor-sanding-polishing" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
+                                <Link href="/services/flooring-maintenance" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
                                     <div className="pt-2">
                                         <Wrench className="w-5 h-5 text-[#111111] shrink-0" />
                                     </div>
@@ -97,7 +96,7 @@ export default function Navbar() {
                                     </div>
                                 </Link>
 
-                                <Link href="/services/floor-sanding-polishing" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
+                                <Link href="/services/floor-staining" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
                                     <div className="pt-2">
                                         <Paintbrush className="w-5 h-5 text-[#111111] shrink-0" />
                                     </div>
@@ -111,7 +110,7 @@ export default function Navbar() {
                                     </div>
                                 </Link>
 
-                                <Link href="/services/floor-sanding-polishing" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
+                                <Link href="/services/floating-floor" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
                                     <div className="pt-2">
                                         <LayoutGrid className="w-5 h-5 text-[#111111] shrink-0" />
                                     </div>
@@ -125,7 +124,7 @@ export default function Navbar() {
                                     </div>
                                 </Link>
 
-                                <Link href="/services/floor-sanding-polishing" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
+                                <Link href="/services/laminate" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
                                     <div className="pt-2">
                                         <Square className="w-5 h-5 text-[#111111] shrink-0" />
                                     </div>
@@ -141,7 +140,7 @@ export default function Navbar() {
                             </div>
 
                             <div className="flex-1 py-3">
-                                <Link href="/services/floor-sanding-polishing" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
+                                <Link href="/services/parquetry" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
                                     <div className="pt-2">
                                         <LayoutGrid className="w-5 h-5 text-[#111111] shrink-0" />
                                     </div>
