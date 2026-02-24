@@ -6,20 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Logo from "../../../public/assets/img/Logo.png";
 
-import {
-    Square,
-    Hammer,
-    Layers,
-    Wrench,
-    Paintbrush,
-    LayoutGrid,
-    Grid2x2,
-    Volume2,
-    Trees,
-    Brush,
-    Layers3,
-    Trophy
-} from "lucide-react";
+import { Square, Hammer, Layers, Wrench, Paintbrush, LayoutGrid, Grid2x2, Volume2, Trees, Brush, Layers3, Trophy } from "lucide-react";
 
 
 export default function Navbar() {
@@ -30,13 +17,7 @@ export default function Navbar() {
             <div className="max-w-[1440px] mx-auto px-8 md:px-[80px] h-24 flex items-center justify-between">
                 {/* LOGO */}
                 <div className="w-[226px] h-[53px]">
-                    <Image
-                        src={Logo}
-                        alt="Company Logo"
-                        width={226}
-                        height={53}
-                        priority
-                    />
+                    <Image src={Logo} alt="Company Logo" width={226} height={53} priority />
                 </div>
 
                 {/* Navigation */}
@@ -44,16 +25,12 @@ export default function Navbar() {
                     <Link href="/">Home</Link>
 
                     {/* Services Dropdown */}
-                    <div
-                        className="relative group"
+                    <div className="relative group"
                         onMouseEnter={() => setOpen(true)}
                         onMouseLeave={() => setOpen(false)}>
                         <div className="flex items-center gap-1 cursor-pointer">
                             <span>Services</span>
-                            <ChevronDown
-                                className={`w-4 h-4 transition-transform duration-300 ${open ? "rotate-180" : ""
-                                    }`}
-                            />
+                            <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
                         </div>
 
                         {/* Dropdown Menu */}
@@ -92,7 +69,7 @@ export default function Navbar() {
                                     </div>
                                 </Link>
 
-                                <Link href="/services/floor-sanding-polishing" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
+                                <Link href="/services/floor-preparation-levelling" className="flex items-start gap-3 px-5 py-2 hover:bg-gray-100 transition-colors text-gray-800">
                                     <div className="pt-2">
                                         <Layers className="w-5 h-5 text-[#111111] shrink-0" />
                                     </div>

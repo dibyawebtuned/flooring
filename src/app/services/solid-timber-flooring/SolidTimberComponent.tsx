@@ -1,52 +1,53 @@
-import React from 'react'
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import HeroBanner from '@/components/ui/HeroBanner'
+import HeroBanner from '@/components/ui/HeroBanner';
 import Banner_Image from "../../../../public/assets/img/bannerimage1.webp";
 import Image_One from "../../../../public/assets/img/8.jpeg";
 import Image_Two from "../../../../public/assets/img/7.jpeg";
-import { ClipboardCheck, ClipboardList, Wrench } from "lucide-react";
-import { Phone } from "lucide-react";
+import { ClipboardCheck, ClipboardList, Wrench, Phone } from "lucide-react";
 
 const SolidTimberComponent = () => {
   return (
     <div>
+      {/* HERO BANNER */}
       <HeroBanner
         backgroundImage={Banner_Image.src}
         title="Premium Solid Timber Flooring Solutions"
         description="Our latest residential project showcases high-quality Blackbutt solid timber flooring, combining natural warmth with exceptional durability for a refined and lasting finish."
       />
 
-      <section className='max-w-[1440px] mx-auto px-6 lg:px-20 py-12'>
-        <div className='grid grid-cols-1 lg:grid-cols-12 gap-10'>
+      <section className='max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-20 py-8 md:py-12'>
+        <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10'>
 
           {/* LEFT CONTENT */}
-          <div className='lg:col-span-8 space-y-10'>
+          <div className='lg:col-span-8 space-y-8 md:space-y-10'>
 
-            {/* IMAGE */}
-            <div className='relative h-[360px] rounded-xl overflow-hidden shadow-md'>
+            {/* MAIN IMAGE */}
+            <div className='relative h-[250px] sm:h-[300px] md:h-[360px] rounded-xl overflow-hidden shadow-md'>
               <Image
                 src={Banner_Image}
-                alt=""
+                alt="Solid Timber Flooring"
                 fill
                 className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 66vw"
               />
             </div>
 
             {/* CONTENT */}
             <div className='space-y-4'>
-              <h4 className='text-2xl lg:text-3xl font-semibold space-grotesk'>
+              <h4 className='text-xl sm:text-2xl lg:text-3xl font-semibold space-grotesk'>
                 Benefits of our services
               </h4>
 
-              <p className='text-[#464646] leading-relaxed'>
+              <p className='text-[#464646] text-sm sm:text-base leading-relaxed'>
                 Premium solid timber flooring combines natural elegance with outstanding durability,
                 creating a sophisticated foundation for any home. Featuring high-grade Blackbutt
                 timber, it offers rich character, long-lasting performance, and the flexibility to
                 be refinished over time — making it a smart, enduring investment in both style and value.
               </p>
 
-              <ul className="space-y-2 text-[#464646]">
+              <ul className="space-y-2 text-[#464646] text-sm sm:text-base">
                 <li className="flex items-center gap-2">
                   <span className="text-gray-600">✔</span> Exceptional Durability
                 </li>
@@ -66,58 +67,60 @@ const SolidTimberComponent = () => {
             </div>
 
             {/* IMAGES GRID */}
-            <div className='flex gap-5'>
-              <div className='relative flex-1 h-[300px] rounded-xl overflow-hidden'>
+            <div className='flex flex-col md:flex-row gap-5'>
+              <div className='relative w-full md:w-2/5 h-[250px] md:h-[300px] rounded-xl overflow-hidden'>
                 <Image
                   src={Image_One}
-                  alt=""
+                  alt="Timber flooring close up"
                   fill
                   className='object-cover'
+                  sizes="(max-width: 768px) 100vw, 40vw"
                 />
               </div>
-              <div className='relative flex-2 h-[300px] rounded-xl overflow-hidden'>
+              <div className='relative w-full md:w-3/5 h-[250px] md:h-[300px] rounded-xl overflow-hidden'>
                 <Image
                   src={Image_Two}
-                  alt=""
+                  alt="Finished timber flooring room"
                   fill
                   className='object-cover'
+                  sizes="(max-width: 768px) 100vw, 60vw"
                 />
               </div>
             </div>
 
             {/* CONTENT BOXES */}
-            <div className='flex gap-5'>
-              <div className='flex-1 flex flex-col gap-[15px] rounded-xl'>
-                <ClipboardCheck className="h-10 w-10 text-[#111111]" />
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-5'>
+              <div className='flex flex-col gap-3 rounded-xl bg-gray-50/50 p-4 sm:p-0 sm:bg-transparent'>
+                <ClipboardCheck className="h-8 w-8 sm:h-10 sm:w-10 text-[#111111]" />
                 <div>
-                  <h5 className='text-lg font-semibold space-grotesk'>
+                  <h5 className='text-base sm:text-lg font-semibold space-grotesk'>
                     Booking Inspection
                   </h5>
-                  <p className='text-sm text-[#555]'>
+                  <p className='text-sm text-[#555] mt-1'>
                     Schedule an on-site inspection to assess flooring requirements and provide accurate solutions.
                   </p>
                 </div>
               </div>
 
-              <div className='flex-1  rounded-xl flex flex-col gap-[15px]'>
-                <ClipboardList className="h-10 w-10 text-[#111111]" />
+              <div className='flex flex-col gap-3 rounded-xl bg-gray-50/50 p-4 sm:p-0 sm:bg-transparent'>
+                <ClipboardList className="h-8 w-8 sm:h-10 sm:w-10 text-[#111111]" />
                 <div>
-                  <h5 className='text-lg font-semibold space-grotesk'>
+                  <h5 className='text-base sm:text-lg font-semibold space-grotesk'>
                     Work Planning
                   </h5>
-                  <p className='text-sm text-[#555]'>
+                  <p className='text-sm text-[#555] mt-1'>
                     Detailed project planning to ensure seamless installation and optimal results.
                   </p>
                 </div>
               </div>
 
-              <div className='flex-1 flex flex-col gap-[15px] rounded-xl'>
-                <Wrench className="h-10 w-10 text-[#111111]" />
+              <div className='flex flex-col gap-3 rounded-xl bg-gray-50/50 p-4 sm:p-0 sm:bg-transparent sm:col-span-2 md:col-span-1'>
+                <Wrench className="h-8 w-8 sm:h-10 sm:w-10 text-[#111111]" />
                 <div>
-                  <h5 className='text-lg font-semibold space-grotesk'>
+                  <h5 className='text-base sm:text-lg font-semibold space-grotesk'>
                     Fix and Install
                   </h5>
-                  <p className='text-sm text-[#555]'>
+                  <p className='text-sm text-[#555] mt-1'>
                     Professional installation and repair services for durable and premium timber flooring.
                   </p>
                 </div>
@@ -126,16 +129,17 @@ const SolidTimberComponent = () => {
           </div>
 
           {/* RIGHT NAV - STICKY */}
-          <div className='lg:col-span-4'>
-            <div className='sticky top-5 space-y-4'>
+          <div className='lg:col-span-4 mt-8 lg:mt-0'>
+            {/* Added top-[100px] so it sticks below fixed headers if you have one */}
+            <div className='sticky top-[30px] space-y-6'>
 
-              <div className='p-5 rounded-xl bg-[#F6F4EF] border border-[#7e704e]/40 shadow-sm'>
-                <h5 className='text-2xl font-semibold text-[#111] mb-3'>
+              <div className='p-5 sm:p-6 rounded-xl bg-[#F6F4EF] border border-[#7e704e]/40 shadow-sm'>
+                <h5 className='text-xl sm:text-2xl font-semibold text-[#111] mb-4'>
                   Our Services
                 </h5>
 
                 <nav>
-                  <ul className='space-y-2'>
+                  <ul className='space-y-3 sm:space-y-2'>
                     {[
                       { name: "Floor Sanding & Polishing", link: "/services/floor-sanding-polishing" },
                       { name: "Floor Preparation & Levelling", link: "/services/floor-preparation-levelling" },
@@ -154,7 +158,7 @@ const SolidTimberComponent = () => {
                       <li key={service.name}>
                         <Link
                           href={service.link}
-                          className="text-gray-700 hover:text-[#111] transition-all duration-200 ease-in-out hover:underline hover:underline-offset-4"
+                          className="text-sm sm:text-base text-gray-700 hover:text-[#111] transition-all duration-200 ease-in-out hover:underline hover:underline-offset-4 block py-1 sm:py-0"
                         >
                           • {service.name}
                         </Link>
@@ -164,8 +168,8 @@ const SolidTimberComponent = () => {
                 </nav>
               </div>
 
-              <div className='p-5 rounded-xl border border-[#7e704e] space-y-3'>
-                <h5 className='text-2xl font-semibold text-[#111]'>
+              <div className='p-5 sm:p-6 rounded-xl border border-[#7e704e] space-y-3'>
+                <h5 className='text-xl sm:text-2xl font-semibold text-[#111]'>
                   Need Help?
                 </h5>
 
@@ -173,18 +177,17 @@ const SolidTimberComponent = () => {
                   Get in touch with our team for expert guidance and support. We’re here to help you.
                 </p>
 
-                <Link href="tel:0414 645 200" className="inline-flex items-center gap-2 text-sm font-medium text-[#111] hover:underline">
-                  <Phone className="h-4 w-4" />
+                <Link href="tel:0414645200" className="inline-flex items-center gap-2 text-base font-medium text-[#111] hover:underline pt-2">
+                  <Phone className="h-5 w-5" />
                   0414 645 200
                 </Link>
               </div>
             </div>
           </div>
-
         </div>
       </section>
     </div>
   )
 }
 
-export default SolidTimberComponent
+export default SolidTimberComponent;
