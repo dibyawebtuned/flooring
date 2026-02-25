@@ -1,56 +1,67 @@
 import React from "react";
 import Link from "next/link";
 import Image_1 from "../../public/assets/img/1.jpeg";
-import { HomeIcon, Squares2X2Icon, SparklesIcon, RectangleStackIcon } from "@heroicons/react/24/solid"; // npm install @heroicons/react
+import Image_2 from "../../public/assets/img/2.jpeg";
+import Image_3 from "../../public/assets/img/3.jpeg";
+import Image_4 from "../../public/assets/img/4.jpeg";
+import Image_5 from "../../public/assets/img/5.jpeg";
+import Image_6 from "../../public/assets/img/7.jpeg";
+import {
+    ChevronDown, Phone, Mail, Send, Menu, X,
+    Square, Hammer, Layers, Wrench, Paintbrush,
+    LayoutGrid, Grid2x2, Volume2, Trees, Brush,
+    Layers3, Trophy
+} from "lucide-react";
+import { Squares2X2Icon, SparklesIcon, RectangleStackIcon } from "@heroicons/react/24/solid"; // npm install @heroicons/react
 
 const cardData = [
     {
         title: "Solid Timber Flooring",
         description:
             "Our solid timber floors are crafted for lasting beauty and strength. Perfect for both new constructions and renovations, these floors bring a warm, natural look.",
-        link: "#",
+        link: "/services/solid-timber-flooring",
         image: Image_1,
-        icon: HomeIcon,
+        icon: Square,
     },
     {
-        title: "Laminate Flooring",
+        title: "Floor Sanding & Polishing",
         description:
             "Laminate flooring offers a durable, wear-resistant surface ideal for busy homes and offices. It mimics the look of timber while being cost-effective.",
-        link: "#",
-        image: Image_1,
-        icon: Squares2X2Icon,
+        link: "/services/floor-sanding-polishing",
+        image: Image_2,
+        icon: Hammer,
     },
     {
-        title: "Decking",
+        title: "Floor Preparation & Levelling",
         description:
             "Enhance your outdoor spaces with beautiful timber decking. Our decking solutions are designed for durability, safety, and outstanding visual appeal.",
-        link: "#",
-        image: Image_1,
-        icon: SparklesIcon,
+        link: "/services/floor-preparation-levelling",
+        image: Image_3,
+        icon: Layers,
     },
     {
-        title: "Floor Preparation & Leveling",
+        title: "Flooring Maintenance",
         description:
             "We ensure your sub-floor, whether concrete or timber, is perfectly level before installation. This guarantees a flawless finish and long-lasting performance.",
-        link: "#",
-        image: Image_1,
-        icon: RectangleStackIcon,
+        link: "/services/flooring-maintenance",
+        image: Image_4,
+        icon: Wrench,
     },
     {
-        title: "Parquetry",
+        title: "Floor Staining",
         description:
             "Add timeless elegance with expertly installed parquetry flooring that combines intricate. Elegance with expertly installed parquetry flooring that combines.",
-        link: "#",
-        image: Image_1,
-        icon: RectangleStackIcon,
+        link: "/services/floor-staining",
+        image: Image_5,
+        icon: Paintbrush,
     },
     {
-        title: "Blackbutt timber floors",
+        title: "Floating Floor",
         description:
             "Achieve a warm, natural look with Blackbutt timber flooring known for its strength, natural look with Blackbutt timber flooring known.",
-        link: "#",
-        image: Image_1,
-        icon: RectangleStackIcon,
+        link: "/services/floating-floor",
+        image: Image_6,
+        icon: LayoutGrid,
     },
 ];
 
@@ -64,7 +75,7 @@ const Service = () => {
                         <h1 className="font-space-grotesk font-medium text-3xl sm:text-4xl md:text-[47px] leading-snug sm:leading-tight md:leading-[55px] tracking-[-0.94px] mb-4">
                             Expert Timber Flooring Solutions
                         </h1>
-                        <p className="font-inter font-medium text-base sm:text-lg text-[#464646] leading-6 sm:leading-7 md:leading-[25px]">
+                        <p className="font-inter inter-400 text-base sm:text-md text-[#464646] leading-6 sm:leading-7 md:leading-[25px]">
                             We provide a wide range of timber flooring solutions tailored to your home, office, or
                             commercial space. Each service is designed to combine durability, elegance, and expert
                             craftsmanship.
@@ -72,9 +83,9 @@ const Service = () => {
                     </div>
 
                     <div className="flex-1 flex justify-start lg:justify-end items-start lg:items-center mt-6 lg:mt-0">
-                        <button className="px-5 py-3 bg-[#111111] text-[#F6F4EF] font-semibold rounded-md hover:bg-[#c1a37c] transition-colors">
-                            View All Services
-                        </button>
+                        <Link href="/contact" className="px-5 py-3 bg-[#111111] text-[#F6F4EF] font-semibold rounded-md hover:bg-[#c1a37c] transition-colors">
+                            Contact Us
+                        </Link>
                     </div>
                 </div>
 
@@ -94,10 +105,10 @@ const Service = () => {
                                 ></div>
 
                                 {/* Overlay for opacity */}
-                                <div className="absolute inset-0 bg-black/60"></div>
+                                <div className="absolute inset-0 bg-black/70"></div>
 
                                 {/* Content */}
-                                <div className="relative z-10 p-6 flex flex-col gap-[10px] items-start justify-center text-start h-full w-full">
+                                <div className="relative z-10 p-6  flex flex-col gap-[10px] items-start justify-center text-start h-full w-full">
                                     {/* Icon */}
                                     <div className="w-10 h-10 bg-[#E6E0D6] flex items-center justify-center rounded-[5px]">
                                         <Icon className="w-5 h-5 text-[#111111]" />

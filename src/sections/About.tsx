@@ -1,9 +1,11 @@
 import React from 'react'
+import Link from 'next/link'
 import ParallaxFeatures from '@/components/ui/AboutEffect'
+
 
 const About = () => {
     return (
-        <div className='max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-20 pt-12 sm:pt-16 lg:pt-20'>
+        <div className='max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px] pt-12 sm:pt-16 lg:pt-20'>
             <div className='flex flex-col lg:flex-row gap-8 lg:gap-20'>
                 {/* Left Section */}
                 <div className='flex-1 flex flex-col gap-6 sm:gap-8'>
@@ -13,19 +15,19 @@ const About = () => {
 
                     {/* Buttons */}
                     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                        <button className="px-5 py-3 bg-[#111111] text-[#F6F4EF] font-semibold rounded-md hover:bg-[#c1a37c] transition-colors">
+                        <Link href="/about" className="px-5 py-3 bg-[#111111] text-[#F6F4EF] font-semibold rounded-md hover:bg-[#c1a37c] transition-colors">
                             Know More
-                        </button>
+                        </Link>
 
-                        <button className="px-5 py-3 bg-transparent border border-[#111111] text-[#111111] font-semibold rounded-md hover:bg-white hover:text-black transition-colors">
+                        <Link href="/contact" className="px-5 py-3 bg-transparent border border-[#111111] text-[#111111] font-semibold rounded-md hover:bg-white hover:text-black transition-colors">
                             Contact Us
-                        </button>
+                        </Link>
                     </div>
                 </div>
 
                 {/* Right Section */}
                 <div className='flex-1'>
-                    <p className='font-inter font-medium text-base sm:text-lg text-[#464646] leading-6 sm:leading-7 md:leading-[25px]'>
+                    <p className='font-inter inter-400 text-base sm:text-md text-[#464646] leading-6 sm:leading-7 md:leading-[25px]'>
                         Sydney’s trusted timber flooring specialists for over 20 years, delivering
                         high-quality floors for homes, offices, and commercial spaces. We specialize
                         in the supply, installation, sanding, polishing, staining, and maintenance of
@@ -39,7 +41,7 @@ const About = () => {
             </div>
 
             <div>
-<ParallaxFeatures/>
+                <ParallaxFeatures />
             </div>
         </div>
     )

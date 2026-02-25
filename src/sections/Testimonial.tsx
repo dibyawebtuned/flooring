@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/24/solid";
 
@@ -45,34 +46,35 @@ const Testimonials = () => {
 
     return (
         <section className="relative bg-[#F6F4EF] overflow-hidden">
-            <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-20 py-16 sm:py-20 lg:py-28">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px] py-[80px]">
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
 
                     {/* Left Side */}
                     <div className="flex-1">
-                        <h2 className="font-space-grotesk font-medium text-3xl sm:text-4xl md:text-[48px] leading-snug md:leading-[55px] tracking-[-0.5px] mb-6">
-                            Words from Our Clients
-                        </h2>
+                        <div className="flex flex-col gap-[10px]">
+                            <h2 className="font-space-grotesk font-medium text-3xl sm:text-4xl md:text-[48px] leading-snug md:leading-[55px] tracking-[-0.5px]">
+                                Words from Our Clients
+                            </h2>
 
-                        <p className="text-[#464646] text-base sm:text-lg mb-8 max-w-[500px]">
-                            Trusted opinions from those who have experienced our craftsmanship firsthand.
-                        </p>
+                            <p className='font-inter inter-400 text-base sm:text-md text-[#464646] leading-6 sm:leading-7 md:leading-[25px] mb-8'>
+                                Trusted opinions from those who have experienced our craftsmanship firsthand.
+                            </p>
+                        </div>
 
                         <div className="flex flex-wrap gap-4">
-                            <button className="px-6 py-3 bg-black text-white rounded-md hover:bg-[#c1a37c] transition-colors">
+                            <Link href="/about" className="px-5 py-3 bg-[#111111] text-[#F6F4EF] font-semibold rounded-md hover:bg-[#c1a37c] transition-colors">
                                 Know More
-                            </button>
+                            </Link>
 
-                            <button className="px-6 py-3 border border-black rounded-md hover:bg-black hover:text-white transition-colors">
+                            <Link href="/contact" className="px-5 py-3 bg-transparent border border-[#111111] text-[#111111] font-semibold rounded-md hover:bg-white hover:text-black transition-colors">
                                 Contact Us
-                            </button>
+                            </Link>
                         </div>
                     </div>
 
                     {/* Right Side - Slider */}
                     <div className="flex-1">
                         <div className="max-w-[650px]">
-
                             {/* Slide Content */}
                             <div className="transition-all duration-500 ease-in-out">
                                 <p className="text-[27px] leading-[1.2em] font-medium mb-8">
@@ -90,22 +92,15 @@ const Testimonials = () => {
                             </div>
 
                             {/* Navigation Buttons - Bottom Center */}
-                            {/* <div className="flex items-center gap-4">
-                                <button
-                                    onClick={prevSlide}
-                                    className="w-10 h-10 flex items-center justify-center bg-black text-white rounded-full hover:bg-[#c1a37c] transition"
-                                >
+                            <div className="flex items-center gap-4">
+                                <button onClick={prevSlide} className="w-10 h-10 flex items-center justify-center bg-black text-white rounded-full hover:bg-[#c1a37c] transition cursor-pointer">
                                     <ChevronLeftIcon className="w-5 h-5" />
                                 </button>
 
-                                <button
-                                    onClick={nextSlide}
-                                    className="w-10 h-10 flex items-center justify-center bg-black text-white rounded-full hover:bg-[#c1a37c] transition"
-                                >
+                                <button onClick={nextSlide} className="w-10 h-10 flex items-center justify-center bg-black text-white rounded-full hover:bg-[#c1a37c] transition cursor-pointer">
                                     <ChevronRightIcon className="w-5 h-5" />
                                 </button>
-                            </div> */}
-
+                            </div>
                         </div>
                     </div>
                 </div>

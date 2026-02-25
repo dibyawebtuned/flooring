@@ -38,7 +38,7 @@ const TimberFeaturesLayout = () => {
 
             {/* The sticky container that locks to the screen while you scroll */}
             <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
-                <div className="max-w-[1280px] w-full mx-auto px-6 lg:px-12">
+                <div className="max-w-[1280px] w-full mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-4 items-center relative">
 
                         {/* LEFT COLUMN */}
@@ -48,10 +48,10 @@ const TimberFeaturesLayout = () => {
                                 style={{ opacity: opacity1, y: y1 }}
                                 className="relative group lg:max-w-[320px]"
                             >
-                                <h3 className="text-2xl font-medium text-gray-900 leading-snug mb-4">
+                                <h3 className="space-grotesk space-grotesk-500 text-2xl font-medium text-gray-900 leading-snug mb-4">
                                     Timeless Look &<br />Natural Feel
                                 </h3>
-                                <p className="text-[#555555] text-[15px] leading-relaxed">
+                                <p className="font-inter inter-400 text-[#555555] text-[15px] leading-relaxed">
                                     Timber flooring delivers a unique look and feeling that enhances both new
                                     and older homes and offices, creating warmth and character that only real
                                     timber can provide.
@@ -66,10 +66,10 @@ const TimberFeaturesLayout = () => {
                                 style={{ opacity: opacity2, y: y2 }}
                                 className="relative group lg:max-w-[320px]"
                             >
-                                <h3 className="text-2xl font-medium text-gray-900 leading-snug mb-4">
+                                <h3 className="space-grotesk space-grotesk-500 text-2xl font-medium text-gray-900 leading-snug mb-4">
                                     Suitable for New &<br />Existing Floors
                                 </h3>
-                                <p className="text-[#555555] text-[15px] leading-relaxed">
+                                <p className="font-inter inter-400 text-[#555555] text-[15px] leading-relaxed">
                                     Whether it is a new installation or restoring an existing floor, timber
                                     flooring can be constructed, sanded, polished, and maintained to achieve
                                     the desired finish.
@@ -97,10 +97,10 @@ const TimberFeaturesLayout = () => {
                                 style={{ opacity: opacity3, y: y3 }}
                                 className="relative group lg:max-w-[320px]"
                             >
-                                <h3 className="text-2xl font-medium text-gray-900 leading-snug mb-4">
+                                <h3 className="space-grotesk space-grotesk-500 text-2xl font-medium text-gray-900 leading-snug mb-4">
                                     Versatile Installation<br />Options
                                 </h3>
-                                <p className="text-[#555555] text-[15px] leading-relaxed">
+                                <p className="font-inter inter-400 text-[#555555] text-[15px] leading-relaxed">
                                     Timber floors can be installed over bearers and joists, existing timber,
                                     particle board, or concrete, making them suitable for a wide range of
                                     building types.
@@ -115,10 +115,10 @@ const TimberFeaturesLayout = () => {
                                 style={{ opacity: opacity4, y: y4 }}
                                 className="relative group lg:max-w-[320px]"
                             >
-                                <h3 className="text-2xl font-medium text-gray-900 leading-snug mb-4">
+                                <h3 className="space-grotesk space-grotesk-500 text-2xl font-medium text-gray-900 leading-snug mb-4">
                                     Wide Range of Timber<br />Choices
                                 </h3>
-                                <p className="text-[#555555] text-[15px] leading-relaxed">
+                                <p className="font-inter inter-400 text-[#555555] text-[15px] leading-relaxed">
                                     Timber flooring is available in solid tongue & groove, recycled, pre-finished,
                                     engineered, parquet, and laminate, allowing flexibility in style, grade, and colour.
                                 </p>

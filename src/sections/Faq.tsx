@@ -48,8 +48,9 @@ const FaqComponent = () => {
     };
 
     return (
-        <section className="max-w-[1440px] mx-auto px-6 lg:px-20 py-20">
-            <div className="grid md:grid-cols-2 gap-16 items-start">
+        <section className="max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px] py-20">
+            {/* Equal Height Grid */}
+            <div className="grid md:grid-cols-2 gap-16 items-stretch">
 
                 {/* LEFT SIDE */}
                 <div>
@@ -62,7 +63,10 @@ const FaqComponent = () => {
                             const isOpen = openIndex === index;
 
                             return (
-                                <div key={index} className="border-t border-gray-300 last:border-b">
+                                <div
+                                    key={index}
+                                    className="border-t border-gray-300 last:border-b"
+                                >
                                     <button
                                         onClick={() => toggleFAQ(index)}
                                         className="w-full flex justify-between items-center py-6 text-left"
@@ -77,13 +81,18 @@ const FaqComponent = () => {
                                         />
                                     </button>
 
+                                    {/* Smooth height animation (no max-height hack) */}
                                     <div
-                                        className={`overflow-hidden transition-all duration-500 ${isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+                                        className={`grid transition-all duration-500 ease-in-out ${isOpen
+                                            ? "grid-rows-[1fr] opacity-100"
+                                            : "grid-rows-[0fr] opacity-0"
                                             }`}
                                     >
-                                        <p className="pb-6 text-gray-600 leading-relaxed">
-                                            {item.a}
-                                        </p>
+                                        <div className="overflow-hidden">
+                                            <p className="pb-6 text-gray-600 leading-relaxed">
+                                                {item.a}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             );
@@ -92,12 +101,14 @@ const FaqComponent = () => {
                 </div>
 
                 {/* RIGHT SIDE IMAGE */}
-                <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
+                <div className="relative w-full h-full rounded-xl overflow-hidden md:sticky md:top-24">
                     <Image
-                        src="/assets/img/1.jpeg" // change path if needed
+                        src="/assets/img/1.jpeg"
                         alt="Timber flooring"
                         fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
                         className="object-cover"
+                        priority
                     />
                 </div>
 
