@@ -44,8 +44,7 @@ export default function Navbar() {
 
     return (
         <header className="absolute top-0 left-0 w-full z-50 text-white">
-            <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-[80px] h-20 md:h-24 flex items-center justify-between">
-
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px] h-20 md:h-24 flex items-center justify-between">
                 {/* LOGO */}
                 <Link href="/" className="w-[180px] md:w-[226px] h-auto" onClick={closeMobileMenu}>
                     <Image src={Logo} alt="Company Logo" width={226} height={53} priority className="w-full h-auto" />
@@ -66,7 +65,7 @@ export default function Navbar() {
 
                         {/* Dropdown Menu */}
                         <div
-                            className={`absolute left-[-200px] xl:left-0 mt-2 w-[600px] bg-white text-black rounded-lg shadow-xl transition-all duration-300 flex ${openDesktop
+                            className={`absolute left-[-200px] xl:left-[-150px] mt-2 w-[600px] bg-white text-black rounded-lg shadow-xl transition-all duration-300 flex ${openDesktop
                                 ? "opacity-100 visible translate-y-0"
                                 : "opacity-0 invisible -translate-y-2"
                                 }`}>
@@ -123,8 +122,7 @@ export default function Navbar() {
                 <button
                     className="lg:hidden p-2 text-white hover:bg-white/10 rounded-md transition-colors"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    aria-label="Toggle Menu"
-                >
+                    aria-label="Toggle Menu">
                     {isMobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
                 </button>
             </div>

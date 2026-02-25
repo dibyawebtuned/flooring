@@ -6,7 +6,7 @@ import Footer_Logo from "../../public/assets/img/footer_logo.png";
 export default function Footer() {
     return (
         <footer className="w-full bg-[#e9e7e3] text-[#2b2b2b]">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-12 md:py-16">
+            <div className="max-w-[1440px] mx-auto px-[80px] py-12 md:py-16">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
                     {/* Logo Section */}
@@ -26,17 +26,14 @@ export default function Footer() {
                             <Link
                                 href="#"
                                 className="w-10 h-10 border border-black rounded-md flex items-center justify-center 
-                                hover:bg-black hover:text-white transition"
-                            >
+                                hover:bg-black hover:text-white transition">
                                 <Facebook size={18} />
                             </Link>
-
 
                             <Link
                                 href="#"
                                 className="w-10 h-10 border border-black rounded-md flex items-center justify-center 
-                                hover:bg-black hover:text-white transition"
-                            >
+                                hover:bg-black hover:text-white transition">
                                 <Instagram size={18} />
                             </Link>
                         </div>

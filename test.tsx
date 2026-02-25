@@ -28,8 +28,7 @@ const Hero = () => {
         AOS.init({
             duration: 1000,
             easing: 'ease-out-cubic',
-            once: true,
-            mirror: false,
+            once: false,
         });
     }, []);
 
@@ -83,40 +82,51 @@ const Hero = () => {
                 <div className="w-full max-w-[1440px] mx-auto flex flex-col lg:flex-row">
 
                     <div className="flex-2 pb-8 sm:pb-10 lg:pb-[50px]">
+
                         <div
                             data-aos="fade-up"
                             data-aos-delay="100"
-                            className="text-start font-inter text-sm sm:text-base font-medium text-[#F6F4EF] mb-2 sm:mb-[10px]">
+                            className="text-start font-inter text-sm sm:text-base font-medium text-[#F6F4EF] mb-2 sm:mb-[10px]"
+                        >
                             Highest quality timber floors and timber flooring installation
                         </div>
 
                         <h1
                             data-aos="fade-up"
                             data-aos-delay="300"
-                            className="space-grotesk space-grotesk-500 text-start text-[#F6F4EF] text-3xl sm:text-4xl md:text-5xl lg:text-[61px] leading-tight sm:leading-tight md:leading-tight lg:leading-[65px] mb-3 sm:mb-[10px]">
-                            {`Welcome to Sydney's quality leader in timber floors.`}
+                            className="space-grotesk text-start text-[#F6F4EF] text-3xl sm:text-4xl md:text-5xl lg:text-[61px] leading-tight lg:leading-[65px] mb-3 sm:mb-[10px]"
+                        >
+                            Welcome to Sydney's quality leader in timber floors.
                         </h1>
 
                         <p
                             data-aos="fade-up"
                             data-aos-delay="500"
-                            className="text-start text-[#E6E0D6]  text-sm sm:text-base font-medium max-w-full sm:max-w-xl lg:max-w-2xl mb-5 sm:mb-[20px]">
-                            With over 20 years of experience, we specialise exclusively in timber flooring—delivering A1-class
-                            workmanship, premium materials, and outstanding customer service across Sydney.
+                            className="text-start text-[#E6E0D6] text-sm sm:text-base font-medium max-w-full sm:max-w-xl lg:max-w-2xl mb-5 sm:mb-[20px]"
+                        >
+                            With over 20 years of experience, we specialise exclusively in timber flooring—delivering A1-class workmanship, premium materials, and outstanding customer service across Sydney.
                         </p>
 
-                        {/* Buttons */}
                         <div
                             data-aos="fade-up"
-                            className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                            <Link href="/about" className="inline-block px-5 py-3 sm:px-5 sm:py-[11px] bg-[#F6F4EF] text-black font-semibold rounded-md transition-all duration-300 ease-in-out hover:bg-[#c1a37c] hover:text-white">
+                            data-aos-delay="700"
+                            className="flex flex-col sm:flex-row gap-3 sm:gap-4"
+                        >
+                            <Link
+                                href="/about"
+                                className="inline-block px-5 py-3 sm:px-5 sm:py-[11px] bg-[#F6F4EF] text-black font-semibold rounded-md transition-all duration-300 ease-in-out hover:bg-[#c1a37c] hover:text-white"
+                            >
                                 Know More
                             </Link>
 
-                            <Link href="/contact" className="px-5 py-3 sm:px-[20px] sm:py-[11px] bg-transparent border border-white text-white font-semibold rounded-[4px] hover:bg-white hover:text-black transition-colors">
+                            <Link
+                                href="/contact"
+                                className="px-5 py-3 sm:px-[20px] sm:py-[11px] bg-transparent border border-white text-white font-semibold rounded-md hover:bg-white hover:text-black transition-all duration-300"
+                            >
                                 Contact Us
                             </Link>
                         </div>
+
                     </div>
 
                     <div className="hidden lg:block flex-1"></div>
@@ -126,15 +136,14 @@ const Hero = () => {
             {/* Navigation */}
             <button
                 onClick={prevSlide}
-                className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white/70 hover:text-white bg-black/20 hover:bg-black/40 rounded-full transition-all">
+                className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white/70 hover:text-white bg-black/20 hover:bg-black/40 rounded-full transition-all duration-300"
+            >
                 <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8" />
             </button>
 
             <button
                 onClick={nextSlide}
-                className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 z-20 
-                           p-2 text-white/70 hover:text-white 
-                           bg-black/20 hover:bg-black/40 rounded-full transition-all"
+                className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white/70 hover:text-white bg-black/20 hover:bg-black/40 rounded-full transition-all duration-300"
             >
                 <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8" />
             </button>
