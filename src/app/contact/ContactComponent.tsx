@@ -115,7 +115,7 @@ const ContactComponent = () => {
                 <div className="w-full">
                     <iframe
                         title="Location Map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.353470808904!2d151.20929531521062!3d-33.86881998065602!2m3!1f0!2f0!3m3!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12b1d7b4f8e8f5%3A0x5045675218ceed0!2sSydney!5e0!3m2!1sen!2sau!4v1670000000000"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d848345.8825954546!2d149.6833834529673!3d-33.84195030773027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b129838f39a743f%3A0x3017d681632a850!2sSydney%20NSW%2C%20Australia!5e0!3m2!1sen!2snp!4v1772089508401!5m2!1sen!2snp"
                         className="w-full h-72 sm:h-96 rounded-md border-0"
                         allowFullScreen
                         loading="lazy"

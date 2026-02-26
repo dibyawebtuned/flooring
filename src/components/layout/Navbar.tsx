@@ -4,12 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import Logo from "../../../public/assets/img/Logo.png";
-import {
-    ChevronDown, Phone, Mail, Send, Menu, X,
-    Square, Hammer, Layers, Wrench, Paintbrush,
-    LayoutGrid, Grid2x2, Volume2, Trees, Brush,
-    Layers3, Trophy
-} from "lucide-react";
+import { ChevronDown, Phone, Mail, Send, Menu, X, Square, Hammer, Layers, Wrench, Paintbrush, LayoutGrid, Grid2x2, Volume2, Trees, Brush, Layers3, Trophy } from "lucide-react";
 
 // Extracted services data for cleaner mapping and easy responsive layout
 const servicesCol1 = [

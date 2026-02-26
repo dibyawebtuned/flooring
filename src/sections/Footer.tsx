@@ -6,7 +6,7 @@ import Footer_Logo from "../../public/assets/img/footer_logo.png";
 export default function Footer() {
     return (
         <footer className="w-full bg-[#e9e7e3] text-[#2b2b2b]">
-            <div className="max-w-[1440px] mx-auto px-[80px] py-12 md:py-16">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px] py-[80px]">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
                     {/* Logo Section */}
@@ -43,10 +43,9 @@ export default function Footer() {
                     <div className="sm:border-l sm:pl-6 lg:pl-10 border-black/30">
                         <h3 className="text-lg md:text-xl font-semibold mb-4">Company</h3>
                         <ul className="space-y-3 text-gray-700">
-                            <li><Link href="#">About us</Link></li>
-                            <li><Link href="#">Projects</Link></li>
-                            <li><Link href="#">FAQs</Link></li>
-                            <li><Link href="#">Contact</Link></li>
+                            <li><Link href="/about">About us</Link></li>
+                            <li><Link href="/project">Projects</Link></li>
+                            <li><Link href="/contact">Contact</Link></li>
                         </ul>
                     </div>
 
@@ -54,10 +53,10 @@ export default function Footer() {
                     <div className="sm:border-l sm:pl-6 lg:pl-10 border-black/30">
                         <h3 className="text-lg md:text-xl font-semibold mb-4">Services</h3>
                         <ul className="space-y-3 text-gray-700">
-                            <li><Link href="#">Floor Sanding & Polishing</Link></li>
-                            <li><Link href="#">Floor Preparation & Levelling</Link></li>
-                            <li><Link href="#">Blackbutt Timber Floors</Link></li>
-                            <li><Link href="#">Flooring Maintenance</Link></li>
+                            <li><Link href="/services/floor-sanding-polishing">Floor Sanding & Polishing</Link></li>
+                            <li><Link href="/services/floor-preparation-levelling">Floor Preparation & Levelling</Link></li>
+                            <li><Link href="/services/blackbutt-timber-floors">Blackbutt Timber Floors</Link></li>
+                            <li><Link href="/services/flooring-maintenance">Flooring Maintenance</Link></li>
                         </ul>
                     </div>
 
@@ -90,7 +89,10 @@ export default function Footer() {
                 {/* Bottom Section */}
                 <div className="border-t border-black/30 mt-12 pt-6 flex flex-col sm:flex-row 
                     justify-between text-sm text-gray-700 gap-2">
-                    <p>© Copyright Prestige Flooring. All Right Reserved.</p>
+                    <p>
+                        © Copyright Prestige Flooring. All Right Reserved.
+                    </p>
+
                     <p>
                         Powered By{" "}
                         <Link href="https://www.murphystechnology.com.au/">

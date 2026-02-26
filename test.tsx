@@ -1,154 +1,141 @@
-'use client';
+"use client"
 
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import Link from "next/link";
+import React, { useState, useEffect } from "react";
+import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/24/solid";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-const slides = [
+const testimonials = [
     {
-        id: 1,
-        image: 'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?q=80&w=2000&auto=format&fit=crop',
+        quote:
+            "With over 20 years of experience, it really shows in their work. The team handled everything from preparation to polishing with precision. We couldn’t be happier with the final result.",
+        name: "Commercial Client",
+        location: "Sydney",
     },
     {
-        id: 2,
-        image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop',
+        quote:
+            "Exceptional craftsmanship and attention to detail. The team delivered beyond expectations and completed the project on time.",
+        name: "Residential Client",
+        location: "Melbourne",
     },
     {
-        id: 3,
-        image: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=2000&auto=format&fit=crop',
+        quote:
+            "Professional, reliable, and highly skilled. Our timber flooring looks absolutely stunning.",
+        name: "Business Owner",
+        location: "Brisbane",
     },
 ];
 
-const Hero = () => {
-    const [currentSlide, setCurrentSlide] = useState(0);
+const Testimonials = () => {
+    const [current, setCurrent] = useState(0);
 
     useEffect(() => {
         AOS.init({
             duration: 1000,
-            easing: 'ease-out-cubic',
-            once: false,
+            once: true,
+            easing: "ease-out-cubic",
         });
     }, []);
 
+    // Auto Slide
     useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrentSlide((prev) =>
-                prev === slides.length - 1 ? 0 : prev + 1
+        const interval = setInterval(() => {
+            setCurrent((prev) =>
+                prev === testimonials.length - 1 ? 0 : prev + 1
             );
-        }, 5000);
-
-        return () => clearInterval(timer);
+        }, 6000);
+        return () => clearInterval(interval);
     }, []);
 
-    // Refresh AOS when slide changes
-    useEffect(() => {
-        AOS.refresh();
-    }, [currentSlide]);
-
     const nextSlide = () => {
-        setCurrentSlide((prev) =>
-            prev === slides.length - 1 ? 0 : prev + 1
-        );
+        setCurrent(current === testimonials.length - 1 ? 0 : current + 1);
     };
 
     const prevSlide = () => {
-        setCurrentSlide((prev) =>
-            prev === 0 ? slides.length - 1 : prev - 1
-        );
+        setCurrent(current === 0 ? testimonials.length - 1 : current - 1);
     };
 
     return (
-        <div className="relative w-full h-[100vh] overflow-hidden bg-gray-900">
+        <section className="relative bg-[#F6F4EF] overflow-hidden">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px] py-[80px]">
+                <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
 
-            {/* Background Slider */}
-            {slides.map((slide, index) => (
-                <div
-                    key={slide.id}
-                    className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0'
-                        }`}
-                >
-                    <div
-                        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                        style={{ backgroundImage: `url(${slide.image})` }}
-                    />
-                    <div className="absolute inset-0 bg-black/60" />
-                </div>
-            ))}
+                    {/* Left Side */}
+                    <div className="flex-1" data-aos="fade-right">
+                        <div className="flex flex-col gap-[10px]">
+                            <h2 className="font-space-grotesk font-medium text-3xl sm:text-4xl md:text-[48px] leading-snug md:leading-[55px] tracking-[-0.5px]">
+                                Words from Our Clients
+                            </h2>
 
-            {/* Text Content */}
-            <div className="relative z-10 flex flex-col items-center justify-end h-full px-4 sm:px-[40px] xl:px-[80px] text-white">
-                <div className="w-full max-w-[1440px] mx-auto flex flex-col lg:flex-row">
-
-                    <div className="flex-2 pb-8 sm:pb-10 lg:pb-[50px]">
-
-                        <div
-                            data-aos="fade-up"
-                            data-aos-delay="100"
-                            className="text-start font-inter text-sm sm:text-base font-medium text-[#F6F4EF] mb-2 sm:mb-[10px]"
-                        >
-                            Highest quality timber floors and timber flooring installation
+                            <p className='font-inter inter-400 text-base sm:text-md text-[#464646] leading-6 sm:leading-7 md:leading-[25px] mb-8'>
+                                Trusted opinions from those who have experienced our craftsmanship firsthand.
+                            </p>
                         </div>
 
-                        <h1
-                            data-aos="fade-up"
-                            data-aos-delay="300"
-                            className="space-grotesk text-start text-[#F6F4EF] text-3xl sm:text-4xl md:text-5xl lg:text-[61px] leading-tight lg:leading-[65px] mb-3 sm:mb-[10px]"
-                        >
-                            Welcome to Sydney's quality leader in timber floors.
-                        </h1>
-
-                        <p
-                            data-aos="fade-up"
-                            data-aos-delay="500"
-                            className="text-start text-[#E6E0D6] text-sm sm:text-base font-medium max-w-full sm:max-w-xl lg:max-w-2xl mb-5 sm:mb-[20px]"
-                        >
-                            With over 20 years of experience, we specialise exclusively in timber flooring—delivering A1-class workmanship, premium materials, and outstanding customer service across Sydney.
-                        </p>
-
                         <div
+                            className="flex flex-wrap gap-4"
                             data-aos="fade-up"
-                            data-aos-delay="700"
-                            className="flex flex-col sm:flex-row gap-3 sm:gap-4"
+                            data-aos-delay="200"
                         >
-                            <Link
-                                href="/about"
-                                className="inline-block px-5 py-3 sm:px-5 sm:py-[11px] bg-[#F6F4EF] text-black font-semibold rounded-md transition-all duration-300 ease-in-out hover:bg-[#c1a37c] hover:text-white"
-                            >
+                            <Link href="/about" className="px-5 py-3 bg-[#111111] text-[#F6F4EF] font-semibold rounded-md hover:bg-[#c1a37c] transition-colors">
                                 Know More
                             </Link>
 
-                            <Link
-                                href="/contact"
-                                className="px-5 py-3 sm:px-[20px] sm:py-[11px] bg-transparent border border-white text-white font-semibold rounded-md hover:bg-white hover:text-black transition-all duration-300"
-                            >
+                            <Link href="/contact" className="px-5 py-3 bg-transparent border border-[#111111] text-[#111111] font-semibold rounded-md hover:bg-white hover:text-black transition-colors">
                                 Contact Us
                             </Link>
                         </div>
-
                     </div>
 
-                    <div className="hidden lg:block flex-1"></div>
+                    {/* Right Side - Slider */}
+                    <div className="flex-1" data-aos="fade-left" data-aos-delay="300">
+                        <div className="max-w-[650px]">
+
+                            {/* Slide Content */}
+                            <div
+                                key={current}   // Important for animation refresh
+                                data-aos="fade-up"
+                                className="transition-all duration-500 ease-in-out"
+                            >
+                                <p className="text-[27px] leading-[1.2em] font-medium mb-8">
+                                    “{testimonials[current].quote}”
+                                </p>
+
+                                <div className="mb-8">
+                                    <h4 className="font-semibold text-lg">
+                                        {testimonials[current].name}
+                                    </h4>
+                                    <p className="text-sm text-[#555]">
+                                        {testimonials[current].location}
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Navigation */}
+                            <div className="flex items-center gap-4">
+                                <button
+                                    onClick={prevSlide}
+                                    className="w-10 h-10 flex items-center justify-center bg-black text-white rounded-full hover:bg-[#c1a37c] transition cursor-pointer"
+                                >
+                                    <ChevronLeftIcon className="w-5 h-5" />
+                                </button>
+
+                                <button
+                                    onClick={nextSlide}
+                                    className="w-10 h-10 flex items-center justify-center bg-black text-white rounded-full hover:bg-[#c1a37c] transition cursor-pointer"
+                                >
+                                    <ChevronRightIcon className="w-5 h-5" />
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
-
-            {/* Navigation */}
-            <button
-                onClick={prevSlide}
-                className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white/70 hover:text-white bg-black/20 hover:bg-black/40 rounded-full transition-all duration-300"
-            >
-                <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8" />
-            </button>
-
-            <button
-                onClick={nextSlide}
-                className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white/70 hover:text-white bg-black/20 hover:bg-black/40 rounded-full transition-all duration-300"
-            >
-                <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8" />
-            </button>
-        </div>
+        </section>
     );
 };
 
-export default Hero;
+export default Testimonials;

@@ -3,22 +3,18 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+
+import Image1 from "../../public/assets/img/bannerimage1.webp";
+import Image2 from "../../public/assets/img/bannerimage2.jpg";
+import Image3 from "../../public/assets/img/bannerimage3.webp";
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const slides = [
-    {
-        id: 1,
-        image: 'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?q=80&w=2000&auto=format&fit=crop',
-    },
-    {
-        id: 2,
-        image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop',
-    },
-    {
-        id: 3,
-        image: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=2000&auto=format&fit=crop',
-    },
+    { id: 1, image: Image1 },
+    { id: 2, image: Image2 },
+    { id: 3, image: Image3 },
 ];
 
 const Hero = () => {
@@ -43,7 +39,6 @@ const Hero = () => {
         return () => clearInterval(timer);
     }, []);
 
-    // Refresh AOS when slide changes
     useEffect(() => {
         AOS.refresh();
     }, [currentSlide]);
@@ -61,7 +56,7 @@ const Hero = () => {
     };
 
     return (
-        <div className="relative w-full h-[100vh] overflow-hidden bg-gray-900">
+        <div className="relative w-full h-[70vh] sm:h-[100vh] overflow-hidden bg-gray-900">
 
             {/* Background Slider */}
             {slides.map((slide, index) => (
@@ -72,7 +67,7 @@ const Hero = () => {
                 >
                     <div
                         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                        style={{ backgroundImage: `url(${slide.image})` }}
+                        style={{ backgroundImage: `url(${slide.image.src})` }}
                     />
                     <div className="absolute inset-0 bg-black/60" />
                 </div>
@@ -100,15 +95,13 @@ const Hero = () => {
                         <p
                             data-aos="fade-up"
                             data-aos-delay="500"
-                            className="text-start text-[#E6E0D6]  text-sm sm:text-base font-medium max-w-full sm:max-w-xl lg:max-w-2xl mb-5 sm:mb-[20px]">
+                            className="text-start text-[#E6E0D6] text-sm sm:text-base font-medium max-w-full sm:max-w-xl lg:max-w-2xl mb-5 sm:mb-[20px]">
                             With over 20 years of experience, we specialise exclusively in timber flooring—delivering A1-class
                             workmanship, premium materials, and outstanding customer service across Sydney.
                         </p>
 
                         {/* Buttons */}
-                        <div
-                            data-aos="fade-up"
-                            className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                        <div data-aos="fade-up" className="flex flex-row gap-3 sm:gap-4">
                             <Link href="/about" className="inline-block px-5 py-3 sm:px-5 sm:py-[11px] bg-[#F6F4EF] text-black font-semibold rounded-md transition-all duration-300 ease-in-out hover:bg-[#c1a37c] hover:text-white">
                                 Know More
                             </Link>
@@ -126,15 +119,14 @@ const Hero = () => {
             {/* Navigation */}
             <button
                 onClick={prevSlide}
-                className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white/70 hover:text-white bg-black/20 hover:bg-black/40 rounded-full transition-all">
+                className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white/70 hover:text-white bg-black/20 hover:bg-black/40 rounded-full transition-all"
+            >
                 <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8" />
             </button>
 
             <button
                 onClick={nextSlide}
-                className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 z-20 
-                           p-2 text-white/70 hover:text-white 
-                           bg-black/20 hover:bg-black/40 rounded-full transition-all"
+                className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white/70 hover:text-white bg-black/20 hover:bg-black/40 rounded-full transition-all"
             >
                 <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8" />
             </button>

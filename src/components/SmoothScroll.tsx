@@ -11,10 +11,9 @@ export default function SmoothScroll({
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
-      smooth: true,
-      direction: 'vertical',
-      gestureDirection: 'vertical',
-      smoothTouch: true,
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      syncTouch: true,
       touchMultiplier: 2,
     });
 

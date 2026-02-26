@@ -63,22 +63,13 @@ const FaqComponent = () => {
                             const isOpen = openIndex === index;
 
                             return (
-                                <div
-                                    key={index}
-                                    className="border-t border-gray-300 last:border-b"
-                                >
-                                    <button
-                                        onClick={() => toggleFAQ(index)}
-                                        className="w-full flex justify-between items-center py-6 text-left"
-                                    >
+                                <div key={index} className="border-t border-gray-300 last:border-b">
+                                    <button onClick={() => toggleFAQ(index)} className="w-full flex justify-between items-center py-6 text-left">
                                         <span className="font-medium text-lg">
                                             {item.q}
                                         </span>
 
-                                        <ChevronDown
-                                            className={`w-5 h-5 transition-transform duration-300 ${isOpen ? "rotate-180" : ""
-                                                }`}
-                                        />
+                                        <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
                                     </button>
 
                                     {/* Smooth height animation (no max-height hack) */}

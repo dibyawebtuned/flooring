@@ -4,6 +4,9 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/24/solid";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const testimonials = [
     {
         quote:
@@ -28,6 +31,14 @@ const testimonials = [
 const Testimonials = () => {
     const [current, setCurrent] = useState(0);
 
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: "ease-out-cubic",
+        });
+    }, []);
+
     // Auto Slide (every 6 seconds)
     useEffect(() => {
         const interval = setInterval(() => {
@@ -46,11 +57,10 @@ const Testimonials = () => {
 
     return (
         <section className="relative bg-[#F6F4EF] overflow-hidden">
-            <div className="max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px] py-[80px]">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px] py-[80px] overflow-hidden">
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
-
                     {/* Left Side */}
-                    <div className="flex-1">
+                    <div className="flex-1" data-aos="fade-right">
                         <div className="flex flex-col gap-[10px]">
                             <h2 className="font-space-grotesk font-medium text-3xl sm:text-4xl md:text-[48px] leading-snug md:leading-[55px] tracking-[-0.5px]">
                                 Words from Our Clients
@@ -73,7 +83,7 @@ const Testimonials = () => {
                     </div>
 
                     {/* Right Side - Slider */}
-                    <div className="flex-1">
+                    <div className="flex-1" data-aos="fade-left" data-aos-delay="300">
                         <div className="max-w-[650px]">
                             {/* Slide Content */}
                             <div className="transition-all duration-500 ease-in-out">

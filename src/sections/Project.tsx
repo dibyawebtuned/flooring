@@ -1,89 +1,159 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
-import { styled } from "@mui/material/styles";
-import Masonry from "@mui/lab/Masonry";
 
-// Import multiple images
+// Make sure your paths are correct relative to this file
 import Img1 from "../../public/assets/img/1.jpeg";
 import Img2 from "../../public/assets/img/2.jpeg";
 import Img3 from "../../public/assets/img/3.jpeg";
 import Img4 from "../../public/assets/img/4.jpeg";
 import Img5 from "../../public/assets/img/5.jpeg";
 import Img6 from "../../public/assets/img/6.jpeg";
+import Img7 from "../../public/assets/img/7.jpeg";
+import Img8 from "../../public/assets/img/8.jpeg";
+import Img9 from "../../public/assets/img/WhatsApp Image 2026-02-16 at 10.51.36 AM.jpeg";
+import Img10 from "../../public/assets/img/WhatsApp Image 2026-02-16 at 10.51.59 AM (1).jpeg";
+import Img11 from "../../public/assets/img/WhatsApp Image 2026-02-16 at 10.51.59 AM.jpeg";
+import Img12 from "../../public/assets/img/bannerimage3.webp";
 
+/* ================= CUSTOM HEIGHT PER IMAGE ================= */
 const items = [
-    { image: Img1, height: 250 },
-    { image: Img2, height: 120 },
-    { image: Img3, height: 200 },
-    { image: Img4, height: 160 },
-    { image: Img5, height: 140 },
-    { image: Img6, height: 220 },
-    { image: Img1, height: 150 },
-    { image: Img2, height: 190 },
-    { image: Img3, height: 110 },
-    { image: Img4, height: 170 },
-    { image: Img5, height: 130 },
-    { image: Img6, height: 210 },
+    { src: Img1, height: 370 }, //1 
+    { src: Img2, height: 270 }, //2 
+    { src: Img3, height: 250 }, //3 
+    { src: Img4, height: 220 }, //4 
+    { src: Img5, height: 400 }, //5 
+    { src: Img6, height: 270 }, //6 
+    { src: Img7, height: 400 }, //7 
+    { src: Img12, height: 270 }, //8 
+    { src: Img8, height: 220 }, //9 
+    { src: Img9, height: 410 }, //10 
+    { src: Img10, height: 260 }, //11 
+    { src: Img11, height: 220 }, //12
 ];
 
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: "#fff",
-    borderRadius: "8px",
-    overflow: "hidden",
-    ...(theme as any).applyStyles?.("dark", {
-        backgroundColor: "#1A2027",
-    }),
-}));
-
+/* ================= COMPONENT ================= */
 const Project = () => {
+    const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+    const closeLightbox = useCallback(() => setSelectedIndex(null), []);
+
+    const showNext = useCallback(() => {
+        setSelectedIndex((prev) => (prev !== null ? (prev + 1) % items.length : null));
+    }, []);
+
+    const showPrev = useCallback(() => {
+        setSelectedIndex((prev) => (prev !== null ? (prev - 1 + items.length) % items.length : null));
+    }, []);
+
+    /* ================= KEYBOARD SUPPORT & SCROLL LOCK ================= */
+    useEffect(() => {
+        if (selectedIndex !== null) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+
+        const handleKey = (e: KeyboardEvent) => {
+            if (e.key === "Escape") closeLightbox();
+            if (e.key === "ArrowRight") showNext();
+            if (e.key === "ArrowLeft") showPrev();
+        };
+
+        window.addEventListener("keydown", handleKey);
+        
+        return () => {
+            window.removeEventListener("keydown", handleKey);
+            document.body.style.overflow = "auto";
+        };
+    }, [selectedIndex, closeLightbox, showNext, showPrev]);
+
     return (
-        <section className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-20 py-12 sm:py-16 lg:py-20">
-
-            {/* Header */}
-            <div className="flex flex-col lg:flex-row gap-8 lg:gap-20 mb-12">
-
-                <div className="flex-1">
-                    <h1 className="font-space-grotesk font-medium text-3xl sm:text-4xl md:text-[47px] leading-snug md:leading-[55px] tracking-[-0.94px]">
+        <>
+            <section className="max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px] py-12 sm:py-16 lg:py-20 flex flex-col items-center">
+                
+                {/* HEADER */}
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between w-full gap-8 mb-12">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[46px] font-medium leading-tight max-w-2xl">
                         Crafting Premium Timber Floors Across Sydney
                     </h1>
-                </div>
-
-                <div className="flex-1 flex justify-start lg:justify-end items-start lg:items-center">
                     <Link
-                        href="#"
-                        className="px-5 py-3 bg-[#111111] text-[#F6F4EF] font-semibold rounded-md hover:bg-[#c1a37c] transition-colors duration-300"
+                        href="/project"
+                        className="inline-block w-fit px-6 py-3 bg-black text-white font-medium rounded-md hover:bg-[#c1a37c] transition"
                     >
                         View Projects
                     </Link>
                 </div>
 
-            </div>
-
-            {/* Masonry Gallery */}
-            <Box sx={{ width: "100%", minHeight: 500 }}>
-                <Masonry
-                    columns={{ xs: 1, sm: 2, md: 3, lg: 4 }}
-                    spacing={2}
-                    sequential
-                >
+                {/* TAILWIND CSS MASONRY GRID */}
+                <div className="w-full columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
                     {items.map((item, index) => (
-                        <Item key={index} sx={{ height: item.height }}>
+                        <div
+                            key={index}
+                            onClick={() => setSelectedIndex(index)}
+                            // break-inside-avoid prevents images from being cut in half across columns
+                            className="relative w-full break-inside-avoid rounded-xl overflow-hidden cursor-pointer bg-gray-100 group"
+                            style={{ height: `${item.height}px` }}
+                        >
                             <Image
-                                src={item.image}
+                                src={item.src}
                                 alt={`Project ${index + 1}`}
-                                className="w-full h-full object-cover"
+                                fill
+                                className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                             />
-                        </Item>
+                        </div>
                     ))}
-                </Masonry>
-            </Box>
+                </div>
+            </section>
 
-        </section>
+            {/* LIGHTBOX */}
+            {selectedIndex !== null && (
+                <div
+                    className="fixed inset-0 bg-black/95 flex items-center justify-center z-[9999] p-4 sm:p-8"
+                    onClick={closeLightbox}
+                >
+                    <div
+                        className="relative w-full h-full max-w-6xl max-h-[85vh] flex items-center justify-center"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <Image
+                            src={items[selectedIndex].src}
+                            alt="Preview"
+                            fill
+                            sizes="100vw"
+                            className="object-contain"
+                            priority 
+                        />
+
+                        {/* Controls */}
+                        <button
+                            onClick={closeLightbox}
+                            className="absolute top-4 right-4 sm:-top-10 sm:right-0 md:-right-12 z-50 text-white text-3xl opacity-70 hover:opacity-100 transition"
+                            aria-label="Close"
+                        >
+                            ✕
+                        </button>
+                        <button
+                            onClick={showPrev}
+                            className="absolute left-4 md:-left-16 z-50 text-white text-5xl opacity-70 hover:opacity-100 transition"
+                            aria-label="Previous"
+                        >
+                            ‹
+                        </button>
+                        <button
+                            onClick={showNext}
+                            className="absolute right-4 md:-right-16 z-50 text-white text-5xl opacity-70 hover:opacity-100 transition"
+                            aria-label="Next"
+                        >
+                            ›
+                        </button>
+                    </div>
+                </div>
+            )}
+        </>
     );
 };
 

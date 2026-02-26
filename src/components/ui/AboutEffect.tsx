@@ -34,7 +34,7 @@ const TimberFeaturesLayout = () => {
 
     return (
         // The tall container that creates the scrollable space
-        <section ref={targetRef} className="relative h-[400vh] bg-white font-inter">
+        <section ref={targetRef} className="relative h-[400vh] bg-white font-inter hidden xl:block">
 
             {/* The sticky container that locks to the screen while you scroll */}
             <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">

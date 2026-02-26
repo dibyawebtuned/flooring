@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Image_1 from "../../public/assets/img/1.jpeg";
 import Image_2 from "../../public/assets/img/2.jpeg";
@@ -6,13 +8,10 @@ import Image_3 from "../../public/assets/img/3.jpeg";
 import Image_4 from "../../public/assets/img/4.jpeg";
 import Image_5 from "../../public/assets/img/5.jpeg";
 import Image_6 from "../../public/assets/img/7.jpeg";
-import {
-    ChevronDown, Phone, Mail, Send, Menu, X,
-    Square, Hammer, Layers, Wrench, Paintbrush,
-    LayoutGrid, Grid2x2, Volume2, Trees, Brush,
-    Layers3, Trophy
-} from "lucide-react";
-import { Squares2X2Icon, SparklesIcon, RectangleStackIcon } from "@heroicons/react/24/solid"; // npm install @heroicons/react
+import { Square, Hammer, Layers, Wrench, Paintbrush, LayoutGrid } from "lucide-react";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const cardData = [
     {
@@ -50,7 +49,7 @@ const cardData = [
     {
         title: "Floor Staining",
         description:
-            "Add timeless elegance with expertly installed parquetry flooring that combines intricate. Elegance with expertly installed parquetry flooring that combines.",
+            "Add timeless elegance with expertly installed parquetry flooring that combines intricate detail with superior craftsmanship.",
         link: "/services/floor-staining",
         image: Image_5,
         icon: Paintbrush,
@@ -58,7 +57,7 @@ const cardData = [
     {
         title: "Floating Floor",
         description:
-            "Achieve a warm, natural look with Blackbutt timber flooring known for its strength, natural look with Blackbutt timber flooring known.",
+            "Achieve a warm, natural look with Blackbutt timber flooring known for its strength and timeless appeal.",
         link: "/services/floating-floor",
         image: Image_6,
         icon: LayoutGrid,
@@ -66,67 +65,87 @@ const cardData = [
 ];
 
 const Service = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: "ease-out-cubic",
+        });
+    }, []);
+
     return (
-        <div className="bg-[#F6F4EF]">
-            <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-20 py-12 sm:py-20 flex flex-col gap-[45px]">
-                {/* Header Section */}
-                <div className="flex flex-col lg:flex-row gap-8 lg:gap-20">
-                    <div className="flex-1">
-                        <h1 className="font-space-grotesk font-medium text-3xl sm:text-4xl md:text-[47px] leading-snug sm:leading-tight md:leading-[55px] tracking-[-0.94px] mb-4">
+        <section className="bg-[#F6F4EF]">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px] py-12 sm:py-16 lg:py-20 flex flex-col gap-12">
+
+                {/* Header */}
+                <div
+                    className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8"
+                    data-aos="fade-up"
+                >
+                    <div className="max-w-2xl">
+                        <h1 className="font-space-grotesk font-medium text-2xl sm:text-3xl md:text-4xl lg:text-[46px] leading-tight mb-4">
                             Expert Timber Flooring Solutions
                         </h1>
-                        <p className="font-inter inter-400 text-base sm:text-md text-[#464646] leading-6 sm:leading-7 md:leading-[25px]">
-                            We provide a wide range of timber flooring solutions tailored to your home, office, or
-                            commercial space. Each service is designed to combine durability, elegance, and expert
-                            craftsmanship.
+                        <p className="text-[#464646] text-sm sm:text-base leading-relaxed">
+                            We provide a wide range of timber flooring solutions tailored to your
+                            home, office, or commercial space. Each service is designed to combine
+                            durability, elegance, and expert craftsmanship.
                         </p>
                     </div>
 
-                    <div className="flex-1 flex justify-start lg:justify-end items-start lg:items-center mt-6 lg:mt-0">
-                        <Link href="/contact" className="px-5 py-3 bg-[#111111] text-[#F6F4EF] font-semibold rounded-md hover:bg-[#c1a37c] transition-colors">
-                            Contact Us
-                        </Link>
-                    </div>
+                    <Link
+                        href="/contact"
+                        className="inline-block w-fit px-6 py-3 bg-[#111111] text-[#F6F4EF] font-medium rounded-md hover:bg-[#c1a37c] transition-colors"
+                    >
+                        Contact Us
+                    </Link>
                 </div>
 
-                {/* Cards Grid */}
+                {/* Cards */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[20px]">
                     {cardData.map((card, index) => {
                         const Icon = card.icon;
+
                         return (
                             <div
                                 key={index}
-                                className="relative rounded-[5px] overflow-hidden h-64 w-full flex flex-col items-center text-center"
+                                data-aos="zoom-in-up"
+                                data-aos-delay={index * 150}
+                                className="relative group rounded-md overflow-hidden min-h-[320px] sm:min-h-[340px] flex"
                             >
-                                {/* Background Image */}
+                                {/* Background */}
                                 <div
-                                    className="absolute inset-0 bg-cover bg-center"
+                                    className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
                                     style={{ backgroundImage: `url(${card.image.src})` }}
-                                ></div>
+                                />
 
-                                {/* Overlay for opacity */}
-                                <div className="absolute inset-0 bg-black/70"></div>
+                                {/* Overlay */}
+                                <div className="absolute inset-0 bg-black/70 group-hover:bg-black/60 transition-all duration-300" />
 
                                 {/* Content */}
-                                <div className="relative z-10 p-6  flex flex-col gap-[10px] items-start justify-center text-start h-full w-full">
-                                    {/* Icon */}
-                                    <div className="w-10 h-10 bg-[#E6E0D6] flex items-center justify-center rounded-[5px]">
-                                        <Icon className="w-5 h-5 text-[#111111]" />
-                                    </div>
-
-                                    <div className="flex flex-col gap-[15px]">
-                                        <div className="flex flex-col gap-[5px]">
-                                            {/* Title & Description */}
-                                            <h3 className="font-semibold text-[24px] text-white">{card.title}</h3>
-                                            <p className="text-gray-100 text-sm font-inter">{card.description}</p>
+                                <div className="relative z-10 p-6 sm:p-8 flex flex-col justify-between w-full text-left">
+                                    <div className="flex flex-col gap-4">
+                                        <div className="w-10 h-10 bg-[#E6E0D6] flex items-center justify-center rounded-md">
+                                            <Icon className="w-5 h-5 text-[#111111]" />
                                         </div>
 
                                         <div>
-                                            {/* Link */}
-                                            <Link href={card.link} className="bg-[#E6E0D6] text-[#111111] text-[14px] space-grotesk space-grotesk-500 px-[11px] py-[7px] rounded-[5px]">
-                                                View More
-                                            </Link>
+                                            <h3 className="text-lg sm:text-xl lg:text-[22px] font-semibold text-white mb-2">
+                                                {card.title}
+                                            </h3>
+                                            <p className="text-gray-200 text-sm sm:text-base leading-relaxed">
+                                                {card.description}
+                                            </p>
                                         </div>
+                                    </div>
+
+                                    <div className="mt-6">
+                                        <Link
+                                            href={card.link}
+                                            className="inline-block bg-[#E6E0D6] text-[#111111] text-sm font-medium px-4 py-2 rounded-md hover:bg-white transition"
+                                        >
+                                            View More
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -134,7 +153,7 @@ const Service = () => {
                     })}
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

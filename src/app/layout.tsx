@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Prestige",
+  title: "Prestige Timber Flooring",
   description: "Prestige",
 };
 

@@ -9,8 +9,7 @@ const Hero = () => {
     return (
         <section className="relative w-full py-[80px] overflow-hidden">
             {/* Background Image */}
-            <Image
-                src={HeroImage}
+            <Image src={HeroImage}
                 alt="Timber craftsmanship"
                 fill
                 priority

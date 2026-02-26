@@ -1,20 +1,32 @@
-import React from 'react'
+"use client";
+
+import React, { useEffect } from 'react'
 import Link from 'next/link'
 import ParallaxFeatures from '@/components/ui/AboutEffect'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 
 const About = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: "ease-out-cubic",
+        })
+    }, [])
     return (
         <div className='max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px] pt-12 sm:pt-16 lg:pt-20'>
-            <div className='flex flex-col lg:flex-row gap-8 lg:gap-20'>
+            <div className='flex flex-col lg:flex-row gap-8 lg:gap-20 overflow-hidden pb-[80px] xl:pb-0'>
                 {/* Left Section */}
-                <div className='flex-1 flex flex-col gap-6 sm:gap-8'>
+                <div className='flex-1 flex flex-col gap-6 sm:gap-8'
+                    data-aos="fade-right">
                     <h1 className='font-space-grotesk font-medium text-3xl sm:text-4xl md:text-[47px] leading-snug sm:leading-tight md:leading-[55px] tracking-[-0.94px]'>
                         Prestige Timber Flooring is Sydney’s trusted leader in timber flooring
                     </h1>
 
                     {/* Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                    <div className="flex flex-row gap-3 sm:gap-4">
                         <Link href="/about" className="px-5 py-3 bg-[#111111] text-[#F6F4EF] font-semibold rounded-md hover:bg-[#c1a37c] transition-colors">
                             Know More
                         </Link>
@@ -26,7 +38,7 @@ const About = () => {
                 </div>
 
                 {/* Right Section */}
-                <div className='flex-1'>
+                <div className='flex-1' data-aos="fade-left" data-aos-delay="300">
                     <p className='font-inter inter-400 text-base sm:text-md text-[#464646] leading-6 sm:leading-7 md:leading-[25px]'>
                         Sydney’s trusted timber flooring specialists for over 20 years, delivering
                         high-quality floors for homes, offices, and commercial spaces. We specialize

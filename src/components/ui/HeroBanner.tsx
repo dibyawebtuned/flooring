@@ -19,10 +19,8 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
 }) => {
     return (
         <section className={`relative w-full ${height} min-h-[400px] flex items-end`}>
-
             {/* Background Image */}
-            <div
-                className="absolute inset-0 bg-cover bg-center"
+            <div className="absolute inset-0 bg-cover bg-center"
                 style={{
                     backgroundImage: `url(${backgroundImage})`,
                 }}
@@ -32,9 +30,8 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
             <div className={`absolute inset-0 ${overlayOpacity}`} />
 
             {/* Content */}
-            <div className="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-[80px] w-full pb-12">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-
+            <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px] w-full pb-6 mb:pb-12">
+                <div className="grid lg:grid-cols-2 gap-4 md:gap-12 items-center">
                     {/* Left */}
                     <div>
                         <h1 className="text-white font-bold leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-[47px]">
