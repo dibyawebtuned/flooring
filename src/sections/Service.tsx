@@ -49,7 +49,7 @@ const cardData = [
     {
         title: "Floor Staining",
         description:
-            "Add timeless elegance with expertly installed parquetry flooring that combines intricate detail with superior craftsmanship.",
+            "Add timeless elegance to your space with expertly installed parquetry flooring that combines intricate detail and refined craftsmanship, creating aesthetic.",
         link: "/services/floor-staining",
         image: Image_5,
         icon: Paintbrush,
@@ -57,7 +57,7 @@ const cardData = [
     {
         title: "Floating Floor",
         description:
-            "Achieve a warm, natural look with Blackbutt timber flooring known for its strength and timeless appeal.",
+            "Achieve a warm and natural aesthetic with Blackbutt timber flooring, celebrated for its exceptional strength, subtle grain patterns, and timeless appeal.",
         link: "/services/floating-floor",
         image: Image_6,
         icon: LayoutGrid,
@@ -105,7 +105,6 @@ const Service = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[20px]">
                     {cardData.map((card, index) => {
                         const Icon = card.icon;
-
                         return (
                             <div
                                 key={index}
@@ -123,7 +122,7 @@ const Service = () => {
                                 <div className="absolute inset-0 bg-black/70 group-hover:bg-black/60 transition-all duration-300" />
 
                                 {/* Content */}
-                                <div className="relative z-10 p-6 sm:p-8 flex flex-col justify-between w-full text-left">
+                                <div className="relative z-10 p-6 sm:p-8 flex flex-col justify-center w-full text-left">
                                     <div className="flex flex-col gap-4">
                                         <div className="w-10 h-10 bg-[#E6E0D6] flex items-center justify-center rounded-md">
                                             <Icon className="w-5 h-5 text-[#111111]" />
@@ -139,7 +138,7 @@ const Service = () => {
                                         </div>
                                     </div>
 
-                                    <div className="mt-6">
+                                    <div className="mt-4">
                                         <Link
                                             href={card.link}
                                             className="inline-block bg-[#E6E0D6] text-[#111111] text-sm font-medium px-4 py-2 rounded-md hover:bg-white transition"

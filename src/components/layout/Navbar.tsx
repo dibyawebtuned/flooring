@@ -104,7 +104,7 @@ export default function Navbar() {
                     </Link>
 
                     <div className="flex gap-2">
-                        <a href="mailto:info@example.com" className="w-9 h-9 border border-white/50 hover:border-white hover:bg-white/10 transition-all rounded flex items-center justify-center">
+                        <a href="mailto:info@prestigetimber.com" className="w-9 h-9 border border-white/50 hover:border-white hover:bg-white/10 transition-all rounded flex items-center justify-center">
                             <Mail className="w-4 h-4" />
                         </a>
                         <Link href="/contact" className="w-9 h-9 border border-white/50 hover:border-white hover:bg-white/10 transition-all rounded flex items-center justify-center">
