@@ -30,7 +30,7 @@ const servicesCol2 = [
     { name: "Hybrid Flooring", desc: "Enjoy the look of timber with the durability of advanced hybrid flooring.", icon: Layers3, href: "/services/hybrid-flooring" },
     // Nine
     { name: "Laminate", desc: "Laminate flooring offers a durable, wear-resistant surface ideal for busy homes.", icon: Square, href: "/services/laminate" },
-    // Ten
+    // Ten 
     { name: "Decking", desc: "Enhance your outdoor spaces with beautiful timber decking.", icon: Grid2x2, href: "/services/decking" },
     // Eleven
     { name: "Sprung Sports Floors", desc: "Deliver performance and safety with professionally installed sprung sports floors.", icon: Trophy, href: "/services/sprung-sports-floors" },

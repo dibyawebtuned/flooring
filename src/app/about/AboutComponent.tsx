@@ -86,11 +86,12 @@ const AboutComponent = () => {
                     <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-20">
                         <div className="relative">
                             {/* Vertical Line */}
-                            <div className="absolute left-4 sm:left-1/2 sm:-translate-x-1/2 h-full w-[2px] bg-[#111]/80"></div>
+                            {/* <div className="absolute left-4 sm:left-1/2 sm:-translate-x-1/2 h-full w-[2px] bg-[#111]/80"></div> */}
+                            <div className="hidden sm:block absolute left-4 sm:left-1/2 sm:-translate-x-1/2 h-full w-[2px] bg-[#111]/80"></div>
 
                             {/* Timeline Item 1 */}
                             <div className="relative grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
-                                <div className="pl-12 sm:pl-0 sm:pr-10">
+                                <div className="sm:pl-0 sm:pr-10">
                                     <div className="w-14 h-14 rounded-full bg-[#111]/90 flex items-center justify-center mb-4">
                                         <Lightbulb className="text-white w-6 h-6" />
                                     </div>
@@ -124,7 +125,7 @@ const AboutComponent = () => {
                                     />
                                 </div>
 
-                                <div className="pl-12 sm:pl-0 md:order-2 order-1">
+                                <div className="sm:pl-0 md:order-2 order-1">
                                     <div className="w-14 h-14 rounded-full bg-[#111]/90 flex items-center justify-center mb-4">
                                         <Settings className="text-white w-6 h-6" />
                                     </div>
@@ -140,7 +141,7 @@ const AboutComponent = () => {
 
                             {/* Timeline Item 3 */}
                             <div className="relative grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                                <div className="pl-12 sm:pl-0 sm:pr-10">
+                                <div className="sm:pl-0 sm:pr-10">
                                     <div className="w-14 h-14 rounded-full bg-[#111]/90 flex items-center justify-center mb-4">
                                         <Wrench className="text-white w-6 h-6" />
                                     </div>
