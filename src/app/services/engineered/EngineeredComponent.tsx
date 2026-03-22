@@ -12,22 +12,20 @@ import Image_Five from "../../../../public/assets/img/WhatsApp Image 2026-02-16 
 
 import { CheckCircle } from "lucide-react";
 
-
-const FloorSandingPolishing = () => {
+const EngineeredComponent = () => {
     const services = [
-        "Restores the natural look and warmth of your floors",
-        "Eliminates scratches, stains, and discoloration ",
-        "Enhances the lifespan of your timber floors",
-        "Provides a safe, slip-resistant finish for your home or business"
+        "Supply of premium engineered timber in various finishes and colours ",
+        "Expert installation with precision joinery",
+        "Sanding and finishing to enhance the natural beauty of the wood",
+        "Maintenance advice for longevity "
     ];
-
     return (
         <div>
             {/* HERO BANNER */}
             <HeroBanner
                 backgroundImage={Banner_Image.src}
-                title="Revive Your Floors with Expert Sanding and Polishing"
-                description="Timber and hardwood floors can lose their shine over time due to scratches, scuffs, and general wear. Our professional floor sanding and polishing services restore your floors to their original glory while improving durability."
+                title="Durable and Stylish Engineered Flooring for Modern Living"
+                description="Engineered timber flooring is the perfect solution for homes and offices where stability and aesthetics are essential. Designed with a strong plywood core and a real timber surface, engineered flooring is resistant to changes in humidity, making it ideal for Sydney’s climate."
             />
 
             <section className='max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-20 py-8 md:py-12'>
@@ -39,30 +37,39 @@ const FloorSandingPolishing = () => {
                     {/* CONTENT */}
                     <div className='space-y-4'>
                         <h4 className='text-xl sm:text-2xl lg:text-3xl font-semibold space-grotesk'>
-                            Our Process Includes
+                            Why Choose Us
                         </h4>
 
-                        {/* <p className='text-[#464646] text-sm sm:text-base leading-relaxed'>
-                            Our professional floor sanding and polishing service restores tired, scratched,
-                            and worn timber floors back to their original beauty. Using advanced dust-minimised
-                            sanding equipment and premium finishes, we create a smooth, durable surface that
-                            enhances the natural grain and warmth of your timber flooring while extending its lifespan.
-                        </p> */}
+                        <p className='text-[#464646] text-sm sm:text-base leading-relaxed'>
+                            We combine technical knowledge with craftsmanship to
+                            install engineered flooring that lasts. Our Sydney
+                            team ensures flawless finishes and durable results,
+                            tailored to your style and lifestyle needs.
+                        </p>
 
-                        <ul className="space-y-2 text-[#464646] text-sm sm:text-base">
-                            <li className="flex items-center gap-2">
-                                <span className="text-gray-600">✔</span> Comprehensive assessment of the floor’s condition
-                            </li>
-                            <li className="flex items-center gap-2">
-                                <span className="text-gray-600">✔</span> Sanding using advanced machinery to remove imperfections
-                            </li>
-                            <li className="flex items-center gap-2">
-                                <span className="text-gray-600">✔</span> Polishing with premium products for a smooth, glossy finish
-                            </li>
-                            <li className="flex items-center gap-2">
-                                <span className="text-gray-600">✔</span> Application of protective coatings to maintain the beauty longer
-                            </li>
-                        </ul>
+
+                        <div>
+                            <div>
+                                <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 mt-5 mb-2">
+                                    Benefits
+                                </h4>
+                            </div>
+
+                            <ul className="space-y-2 text-[#464646] text-sm sm:text-base">
+                                <li className="flex items-center gap-2">
+                                    <span className="text-gray-600">✔</span> Superior stability compared to solid timber
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <span className="text-gray-600">✔</span> Can be installed over underfloor heating systems
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <span className="text-gray-600">✔</span> Offers the authentic look of natural wood with enhanced durability
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <span className="text-gray-600">✔</span> Easy to maintain and refinish if required
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
                     {/* IMAGES GRID */}
@@ -91,7 +98,7 @@ const FloorSandingPolishing = () => {
                     <div>
                         <div>
                             <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 mt-5 mb-3">
-                                Benefits
+                                Our Services Include
                             </h4>
                         </div>
 
@@ -110,7 +117,7 @@ const FloorSandingPolishing = () => {
 
 
                     {/*  */}
-                    <div>
+                    {/* <div>
                         <div>
                             <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 mt-5 mb-3">
                                 Why Choose Us
@@ -125,11 +132,11 @@ const FloorSandingPolishing = () => {
                                 eco-friendly products wherever possible.
                             </p>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </section>
         </div>
     )
 }
 
-export default FloorSandingPolishing
+export default EngineeredComponent

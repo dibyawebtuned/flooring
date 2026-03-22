@@ -32,17 +32,6 @@ const InstallationComponent = () => {
                 {/* LEFT CONTENT */}
                 <div className='lg:col-span-8 space-y-8 md:space-y-10'>
 
-                    {/* MAIN IMAGE */}
-                    {/* <div className='relative h-[250px] sm:h-[300px] md:h-[360px] rounded-xl overflow-hidden shadow-md'>
-                        <Image
-                            src={Image_Three}
-                            alt="Solid Timber Flooring"
-                            fill
-                            className="object-cover"
-                            sizes="(max-width: 1024px) 100vw, 66vw"
-                        />
-                    </div> */}
-
                     {/* CONTENT */}
                     <div className='space-y-4'>
                         <h4 className='text-xl sm:text-2xl lg:text-3xl font-semibold space-grotesk'>
@@ -75,9 +64,6 @@ const InstallationComponent = () => {
                                 <li className="flex items-center gap-2">
                                     <span className="text-gray-600">✔</span> Reduced risk of future repairs caused by poor installation
                                 </li>
-                                {/* <li className="flex items-center gap-2">
-                                <span className="text-gray-600">✔</span> Increases Property Value & Appeal
-                            </li> */}
                             </ul>
                         </div>
                     </div>
@@ -111,44 +97,6 @@ const InstallationComponent = () => {
                                 What We Offer
                             </h4>
                         </div>
-
-                        {/* <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-5'>
-                            <div className='flex flex-col gap-3 rounded-xl bg-gray-50/50 p-4 sm:p-0 sm:bg-transparent'>
-                                <ClipboardCheck className="h-8 w-8 sm:h-10 sm:w-10 text-[#111111]" />
-                                <div>
-                                    <h5 className='text-base sm:text-lg font-semibold space-grotesk'>
-                                        Floor Assessment
-                                    </h5>
-                                    <p className='text-sm text-[#555] mt-1'>
-                                        We inspect your existing timber flooring to assess condition, damage, and the best sanding and polishing approach.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className='flex flex-col gap-3 rounded-xl bg-gray-50/50 p-4 sm:p-0 sm:bg-transparent'>
-                                <ClipboardList className="h-8 w-8 sm:h-10 sm:w-10 text-[#111111]" />
-                                <div>
-                                    <h5 className='text-base sm:text-lg font-semibold space-grotesk'>
-                                        Surface Preparation
-                                    </h5>
-                                    <p className='text-sm text-[#555] mt-1'>
-                                        Careful preparation including gap filling, minor repairs, and precision sanding to create a flawless foundation.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className='flex flex-col gap-3 rounded-xl bg-gray-50/50 p-4 sm:p-0 sm:bg-transparent sm:col-span-2 md:col-span-1'>
-                                <Wrench className="h-8 w-8 sm:h-10 sm:w-10 text-[#111111]" />
-                                <div>
-                                    <h5 className='text-base sm:text-lg font-semibold space-grotesk'>
-                                        Sanding & Polishing
-                                    </h5>
-                                    <p className='text-sm text-[#555] mt-1'>
-                                        Professional multi-stage sanding and premium coating application for a smooth, durable, and beautifully finished floor.
-                                    </p>
-                                </div>
-                            </div>
-                        </div> */}
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-5">
                             {services.map((service, index) => (

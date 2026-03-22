@@ -10,186 +10,105 @@ import Image_Three from "../../../../public/assets/img/WhatsApp Image 2026-02-16
 import Image_Four from "../../../../public/assets/img/WhatsApp Image 2026-02-16 at 10.51.59 AM.jpeg";
 import Image_Five from "../../../../public/assets/img/WhatsApp Image 2026-02-16 at 10.51.59 AM (1).jpeg";
 
+import { CheckCircle } from "lucide-react";
 
 const FlooringMaintenance = () => {
+    const services = [
+        "Cleaning, polishing, and protective coating application",
+        "Repairing scratches, dents, and minor damage",
+        "Advice on long-term care and maintenance schedules",
+        "Scheduled maintenance programs for residential and commercial clients"
+    ];
+
     return (
         <div>
             {/* HERO BANNER */}
             <HeroBanner
                 backgroundImage={Banner_Image.src}
-                title="Professional Flooring Maintenance Services"
-                description="Protect and extend the life of your timber floors with our expert flooring maintenance solutions. From routine care and recoating to minor repairs and surface restoration, we help preserve the beauty, durability, and value of your flooring for years to come."
+                title="Protect and Prolong the Life of Your Floors"
+                description="Regular maintenance is key to keeping your floors looking new and performing at their best. Weprovide tailored flooring maintenance solutions for timber, laminate, engineered, and hybrid floors across Sydney."
             />
 
             <section className='max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-20 py-8 md:py-12'>
-                <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10'>
+                {/* LEFT CONTENT */}
+                <div className='lg:col-span-8 space-y-8 md:space-y-10'>
 
-                    {/* LEFT CONTENT */}
-                    <div className='lg:col-span-8 space-y-8 md:space-y-10'>
+                    {/* CONTENT */}
+                    <div className='space-y-4'>
+                        <h4 className='text-xl sm:text-2xl lg:text-3xl font-semibold space-grotesk'>
+                            Why Choose Us
+                        </h4>
 
-                        {/* MAIN IMAGE */}
-                        <div className='relative h-[250px] sm:h-[300px] md:h-[360px] rounded-xl overflow-hidden shadow-md'>
-                            <Image
-                                src={Image_Three}
-                                alt="Solid Timber Flooring"
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 1024px) 100vw, 66vw"
-                            />
-                        </div>
+                        <p className='text-[#464646] text-sm sm:text-base leading-relaxed'>
+                            Our experienced Sydney team provides professional, reliable, and
+                            eco-friendly maintenance services. We help clients protect their
+                            flooring investment while ensuring their space always looks its best.
+                        </p>
 
-                        {/* CONTENT */}
-                        <div className='space-y-4'>
-                            <h4 className='text-xl sm:text-2xl lg:text-3xl font-semibold space-grotesk'>
-                                Benefits of Flooring Maintenance
-                            </h4>
 
-                            <p className='text-[#464646] text-sm sm:text-base leading-relaxed'>
-                                Regular flooring maintenance is essential to preserve the appearance, durability,
-                                and performance of your timber floors. Our professional maintenance services
-                                include deep cleaning, recoating, minor repairs, and surface refreshing — helping
-                                to prevent long-term damage while maintaining a smooth, protected, and beautiful finish.
-                            </p>
+                        <div>
+                            <div>
+                                <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 mt-5 mb-2">
+                                    Benefits
+                                </h4>
+                            </div>
 
                             <ul className="space-y-2 text-[#464646] text-sm sm:text-base">
                                 <li className="flex items-center gap-2">
-                                    <span className="text-gray-600">✔</span> Extends Floor Lifespan
+                                    <span className="text-gray-600">✔</span> Extends the life of your floors
                                 </li>
                                 <li className="flex items-center gap-2">
-                                    <span className="text-gray-600">✔</span> Restores Shine & Appearance
+                                    <span className="text-gray-600">✔</span> Maintains appearance and shine
                                 </li>
                                 <li className="flex items-center gap-2">
-                                    <span className="text-gray-600">✔</span> Prevents Costly Future Repairs
+                                    <span className="text-gray-600">✔</span> Prevents costly repairs or replacements
                                 </li>
                                 <li className="flex items-center gap-2">
-                                    <span className="text-gray-600">✔</span> Enhances Surface Protection
-                                </li>
-                                <li className="flex items-center gap-2">
-                                    <span className="text-gray-600">✔</span> Maintains Property Value
+                                    <span className="text-gray-600">✔</span> Enhances safety and hygiene in your space
                                 </li>
                             </ul>
                         </div>
+                    </div>
 
-                        {/* IMAGES GRID */}
-                        <div className='flex flex-col md:flex-row gap-5'>
-                            <div className='relative w-full md:w-2/5 h-[250px] md:h-[300px] rounded-xl overflow-hidden'>
-                                <Image
-                                    src={Image_Four}
-                                    alt="Timber flooring close up"
-                                    fill
-                                    className='object-cover'
-                                    sizes="(max-width: 768px) 100vw, 40vw"
-                                />
-                            </div>
-                            <div className='relative w-full md:w-3/5 h-[250px] md:h-[300px] rounded-xl overflow-hidden'>
-                                <Image
-                                    src={Image_Five}
-                                    alt="Finished timber flooring room"
-                                    fill
-                                    className='object-cover'
-                                    sizes="(max-width: 768px) 100vw, 60vw"
-                                />
-                            </div>
+                    {/* IMAGES GRID */}
+                    <div className='flex flex-col md:flex-row gap-5'>
+                        <div className='relative w-full md:w-2/5 h-[250px] md:h-[300px] rounded-xl overflow-hidden'>
+                            <Image
+                                src={Image_Four}
+                                alt="Timber flooring close up"
+                                fill
+                                className='object-cover'
+                                sizes="(max-width: 768px) 100vw, 40vw"
+                            />
                         </div>
-
-                        {/* CONTENT BOXES */}
-                        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-5'>
-                            <div className='flex flex-col gap-3 rounded-xl bg-gray-50/50 p-4 sm:p-0 sm:bg-transparent'>
-                                <ClipboardCheck className="h-8 w-8 sm:h-10 sm:w-10 text-[#111111]" />
-                                <div>
-                                    <h5 className='text-base sm:text-lg font-semibold space-grotesk'>
-                                        Floor Assessment
-                                    </h5>
-                                    <p className='text-sm text-[#555] mt-1'>
-                                        We inspect the condition of your flooring to identify wear, scratches,
-                                        coating deterioration, and areas requiring attention.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className='flex flex-col gap-3 rounded-xl bg-gray-50/50 p-4 sm:p-0 sm:bg-transparent'>
-                                <ClipboardList className="h-8 w-8 sm:h-10 sm:w-10 text-[#111111]" />
-                                <div>
-                                    <h5 className='text-base sm:text-lg font-semibold space-grotesk'>
-                                        Maintenance Planning
-                                    </h5>
-                                    <p className='text-sm text-[#555] mt-1'>
-                                        A tailored maintenance plan is created, including cleaning,
-                                        recoating, polishing, or minor repairs to suit your floor type.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className='flex flex-col gap-3 rounded-xl bg-gray-50/50 p-4 sm:p-0 sm:bg-transparent sm:col-span-2 md:col-span-1'>
-                                <Wrench className="h-8 w-8 sm:h-10 sm:w-10 text-[#111111]" />
-                                <div>
-                                    <h5 className='text-base sm:text-lg font-semibold space-grotesk'>
-                                        Restore & Protect
-                                    </h5>
-                                    <p className='text-sm text-[#555] mt-1'>
-                                        We carefully restore the surface and apply protective finishes
-                                        to enhance durability, appearance, and long-term performance.
-                                    </p>
-                                </div>
-                            </div>
+                        <div className='relative w-full md:w-3/5 h-[250px] md:h-[300px] rounded-xl overflow-hidden'>
+                            <Image
+                                src={Image_Five}
+                                alt="Finished timber flooring room"
+                                fill
+                                className='object-cover'
+                                sizes="(max-width: 768px) 100vw, 60vw"
+                            />
                         </div>
                     </div>
 
-                    {/* RIGHT NAV - STICKY */}
-                    <div className='lg:col-span-4 mt-8 lg:mt-0'>
-                        {/* Added top-[100px] so it sticks below fixed headers if you have one */}
-                        <div className='sticky top-[30px] space-y-6'>
+                    {/* CONTENT BOXES */}
+                    <div>
+                        <div>
+                            <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 my-5">
+                                Our Services Include
+                            </h4>
+                        </div>
 
-                            <div className='p-5 sm:p-6 rounded-xl bg-[#F6F4EF] border border-[#7e704e]/40 shadow-sm'>
-                                <h5 className='text-xl sm:text-2xl font-semibold text-[#111] mb-4'>
-                                    Our Services
-                                </h5>
-
-                                <nav>
-                                    <ul className='space-y-3 sm:space-y-2'>
-                                        {[
-                                            { name: "Solid Timber Flooring", link: "/services/solid-timber-flooring" },
-                                            { name: "Floor Sanding & Polishing", link: "/services/floor-sanding-polishing" },
-                                            { name: "Floor Preparation & Levelling", link: "/services/floor-preparation-levelling" },
-                                            // { name: "Flooring Maintenance", link: "/services/flooring-maintenance" },
-                                            { name: "Floor Staining", link: "/services/floor-staining" },
-                                            { name: "Floating Floor", link: "/services/floating-floor" },
-                                            { name: "Laminate", link: "/services/laminate" },
-                                            { name: "Parquetry", link: "/services/parquetry" },
-                                            { name: "Decking", link: "/services/decking" },
-                                            { name: "Noise Reduction", link: "/services/noise-reduction" },
-                                            { name: "Blackbutt Timber Floors", link: "/services/blackbutt-timber-floors" },
-                                            { name: "Limewashing", link: "/services/limewashing" },
-                                            { name: "Hybrid Flooring", link: "/services/hybrid-flooring" },
-                                            { name: "Sprung Sports Floors", link: "/services/sprung-sports-floors" },
-                                        ].map((service) => (
-                                            <li key={service.name}>
-                                                <Link
-                                                    href={service.link}
-                                                    className="text-sm sm:text-base text-gray-700 hover:text-[#111] transition-all duration-200 ease-in-out hover:underline hover:underline-offset-4 block py-1 sm:py-0"
-                                                >
-                                                    • {service.name}
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </nav>
-                            </div>
-
-                            <div className='p-5 sm:p-6 rounded-xl border border-[#7e704e] space-y-3'>
-                                <h5 className='text-xl sm:text-2xl font-semibold text-[#111]'>
-                                    Need Help?
-                                </h5>
-
-                                <p className='text-sm text-gray-600 leading-relaxed'>
-                                    Get in touch with our team for expert guidance and support. We’re here to help you.
-                                </p>
-
-                                <Link href="tel:0414645200" className="inline-flex items-center gap-2 text-base font-medium text-[#111] hover:underline pt-2">
-                                    <Phone className="h-5 w-5" />
-                                    0414 645 200
-                                </Link>
-                            </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-5">
+                            {services.map((service, index) => (
+                                <div
+                                    key={index}
+                                    className="flex flex-col items-start gap-3 p-5 bg-white rounded-xl shadow hover:shadow-lg transition-shadow duration-300">
+                                    <CheckCircle className="h-6 w-6 text-yellow-600" />
+                                    <p className="text-gray-700 text-sm sm:text-base font-normal">{service}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>

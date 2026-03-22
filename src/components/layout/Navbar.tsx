@@ -25,7 +25,7 @@ const servicesCol1 = [
 
 const servicesCol2 = [
     // Seven
-    { name: "Engineered Flooring", desc: "Add timeless elegance with expertly installed parquetry flooring.", icon: LayoutGrid, href: "/services/parquetry" },
+    { name: "Engineered Flooring", desc: "Add timeless elegance with expertly installed parquetry flooring.", icon: LayoutGrid, href: "/services/engineered" },
     // Eight
     { name: "Hybrid Flooring", desc: "Enjoy the look of timber with the durability of advanced hybrid flooring.", icon: Layers3, href: "/services/hybrid-flooring" },
     // Nine
@@ -200,9 +200,9 @@ export default function Navbar() {
             </div>
 
             {/* MOBILE NAVIGATION MENU (Drawer) */}
-            <div className={`lg:hidden fixed inset-0 top-[80px] bg-[#111111] overflow-y-auto transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+            <div className={`lg:hidden fixed inset-0 top-[80px] bg-[#111111] overflow-y-auto transition-transform duration-300 ease-in-out text-[white] ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                 <nav className="flex flex-col px-6 py-8 gap-6 text-lg">
-                    <Link href="/" onClick={closeMobileMenu} className="border-b border-gray-800 pb-2">Home</Link>
+                    <Link href="/" onClick={closeMobileMenu} className="border-b border-gray-800 pb-2 text-[white]">Home</Link>
 
                     {/* Mobile Services Accordion */}
                     <div className="flex flex-col border-b border-gray-800 pb-2">
