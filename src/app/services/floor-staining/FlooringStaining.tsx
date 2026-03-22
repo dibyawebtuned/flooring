@@ -29,7 +29,7 @@ const FlooringStaining = () => {
                 description="Floor staining transforms ordinary timber floors into stunning features of your home or office. At Prestige Timber Flooring we offer a wide range of stain colours and finishes, allowing you to achieve the perfect look to match your interior décor."
             />
 
-            <section className='max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-20 py-8 md:py-12'>
+            <section className='max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px] py-8 md:py-12'>
                 {/* LEFT CONTENT */}
                 <div className='lg:col-span-8 space-y-8 md:space-y-10'>
                     {/* MAIN IMAGE */}

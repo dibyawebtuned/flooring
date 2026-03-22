@@ -25,7 +25,7 @@ const AboutComponent = () => {
 
             <section>
                 {/* Experience Section */}
-                <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-20 py-12 sm:py-16 flex flex-col gap-12">
+                <div className="max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px] py-12 sm:py-16 flex flex-col gap-12">
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
                         <div className="md:col-span-4">
                             <span className="uppercase text-sm font-semibold text-[#111]/70">
@@ -83,7 +83,7 @@ const AboutComponent = () => {
 
                 {/* Timeline Section */}
                 <div className="bg-[#F6F4EF] py-20 sm:py-24">
-                    <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-20">
+                    <div className="max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px]">
                         <div className="relative">
                             {/* Vertical Line */}
                             {/* <div className="absolute left-4 sm:left-1/2 sm:-translate-x-1/2 h-full w-[2px] bg-[#111]/80"></div> */}

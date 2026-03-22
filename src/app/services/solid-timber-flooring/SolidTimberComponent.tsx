@@ -26,7 +26,7 @@ const SolidTimberComponent = () => {
         description="Solid tongue and groove flooring is a classic choice for Sydney homes and commercial spaces, offering unmatched strength, stability, and aesthetic appeal. Each plank interlocks perfectly, creating a seamless, smooth surface that can withstand years of use."
       />
 
-      <section className='max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-20 py-8 md:py-12'>
+      <section className='max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px] py-8 md:py-12'>
         {/* LEFT CONTENT */}
         <div className='lg:col-span-8 space-y-8 md:space-y-10'>
 

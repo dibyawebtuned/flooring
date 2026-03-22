@@ -20,18 +20,18 @@ import Image from "next/image";
 
 /* ================= CUSTOM HEIGHT PER IMAGE ================= */
 const items = [
-    { src: "/prestige2.0/assets/latest/IMG_1513.JPG", height: 370 }, //1 
-    { src: "/prestige2.0/assets/latest/IMG_1521.JPG", height: 270 }, //2 
-    { src: "/prestige2.0/assets/latest/IMG_1522.JPG", height: 250 }, //3 
-    { src: "/prestige2.0/assets/latest/IMG_1525.JPG", height: 220 }, //4 
-    { src: "/prestige2.0/assets/latest/IMG_1527.JPG", height: 400 }, //5 
-    { src: "/prestige2.0/assets/latest/IMG_1528.JPG", height: 270 }, //6 
-    { src: "/prestige2.0/assets/latest/IMG_1560.JPG", height: 400 }, //7 
-    { src: "/prestige2.0/assets/latest/IMG_1583.JPG", height: 270 }, //8 
-    { src: "/prestige2.0/assets/latest/IMG_1614.JPG", height: 220 }, //9 
-    { src: "/prestige2.0/assets/latest/IMG_1618.JPG", height: 410 }, //10 
-    { src: "/prestige2.0/assets/latest/IMG_1619.JPG", height: 260 }, //11 
-    { src: "/prestige2.0/assets/latest/IMG_1620.JPG", height: 220 }, //12
+    { src: "/prestige3.0/assets/latest/IMG_1513.JPG", height: 370 }, //1 
+    { src: "/prestige3.0/assets/latest/IMG_1521.JPG", height: 270 }, //2 
+    { src: "/prestige3.0/assets/latest/IMG_1522.JPG", height: 250 }, //3 
+    { src: "/prestige3.0/assets/latest/IMG_1525.JPG", height: 220 }, //4 
+    { src: "/prestige3.0/assets/latest/IMG_1527.JPG", height: 400 }, //5 
+    { src: "/prestige3.0/assets/latest/IMG_1528.JPG", height: 270 }, //6 
+    { src: "/prestige3.0/assets/latest/IMG_1560.JPG", height: 400 }, //7 
+    { src: "/prestige3.0/assets/latest/IMG_1583.JPG", height: 270 }, //8 
+    { src: "/prestige3.0/assets/latest/IMG_1614.JPG", height: 220 }, //9 
+    { src: "/prestige3.0/assets/latest/IMG_1618.JPG", height: 410 }, //10 
+    { src: "/prestige3.0/assets/latest/IMG_1619.JPG", height: 260 }, //11 
+    { src: "/prestige3.0/assets/latest/IMG_1620.JPG", height: 220 }, //12
 ];
 
 /* ================= COMPONENT ================= */

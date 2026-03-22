@@ -28,7 +28,7 @@ const EngineeredComponent = () => {
                 description="Engineered timber flooring is the perfect solution for homes and offices where stability and aesthetics are essential. Designed with a strong plywood core and a real timber surface, engineered flooring is resistant to changes in humidity, making it ideal for Sydney’s climate."
             />
 
-            <section className='max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-20 py-8 md:py-12'>
+            <section className='max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px] py-8 md:py-12'>
                 {/* LEFT CONTENT */}
                 <div className='lg:col-span-8 space-y-8 md:space-y-10'>
 

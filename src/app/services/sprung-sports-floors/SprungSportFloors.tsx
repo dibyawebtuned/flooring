@@ -26,7 +26,7 @@ const SprungSportFloors = () => {
                 description="Sprung sports flooring is designed to reduce impact on joints while providing excellent traction for indoor sports, dance, and fitness activities. It’s the preferred choice for gyms, sports halls, and studios."
             />
 
-            <section className='max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-20 py-8 md:py-12'>
+            <section className='max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px] py-8 md:py-12'>
                 {/* LEFT CONTENT */}
                 <div className='lg:col-span-8 space-y-8 md:space-y-10'>
 

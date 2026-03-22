@@ -29,7 +29,7 @@ const FlooringMaintenance = () => {
                 description="Regular maintenance is key to keeping your floors looking new and performing at their best. Weprovide tailored flooring maintenance solutions for timber, laminate, engineered, and hybrid floors across Sydney."
             />
 
-            <section className='max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-20 py-8 md:py-12'>
+            <section className='max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px] py-8 md:py-12'>
                 {/* LEFT CONTENT */}
                 <div className='lg:col-span-8 space-y-8 md:space-y-10'>
 

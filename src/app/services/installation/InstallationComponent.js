@@ -28,7 +28,7 @@ const InstallationComponent = () => {
                 description="At Prestige Timber Flooring, we provide expert flooring installation services across Sydney, ensuring that every floor we lay is precise, durable, and visually stunning. Whether it’s a residential home, commercial office, or high-traffic retail space, our team of experienced installers handles every project with care and professionalism"
             />
 
-            <section className='max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-20 py-8 md:py-12'>
+            <section className='max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px] py-8 md:py-12'>
                 {/* LEFT CONTENT */}
                 <div className='lg:col-span-8 space-y-8 md:space-y-10'>
 

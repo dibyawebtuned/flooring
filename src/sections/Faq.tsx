@@ -94,7 +94,7 @@ const FaqComponent = () => {
                 {/* RIGHT SIDE IMAGE */}
                 <div className="relative w-full h-full rounded-xl overflow-hidden md:sticky md:top-24">
                     <Image
-                        src="/prestige2.0/assets/img/1.jpeg"
+                        src="/prestige3.0/assets/img/1.jpeg"
                         alt="Timber flooring"
                         fill
                         sizes="(max-width: 768px) 100vw, 50vw"

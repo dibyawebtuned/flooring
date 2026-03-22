@@ -27,7 +27,7 @@ const ContactComponent = () => {
                 ]}
             />
 
-            <section className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-20 py-12 sm:py-16 flex flex-col gap-12">
+            <section className="max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px] py-12 sm:py-16 flex flex-col gap-12">
                 {/* INFO BAR */}
                 <div className="flex flex-col lg:flex-row gap-6 rounded-md border border-gray-300 p-6">
                     <div className="flex-1 flex items-center gap-3">

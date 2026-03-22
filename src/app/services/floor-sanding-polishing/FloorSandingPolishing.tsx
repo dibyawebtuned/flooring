@@ -30,7 +30,7 @@ const FloorSandingPolishing = () => {
                 description="Timber and hardwood floors can lose their shine over time due to scratches, scuffs, and general wear. Our professional floor sanding and polishing services restore your floors to their original glory while improving durability."
             />
 
-            <section className='max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-20 py-8 md:py-12'>
+            <section className='max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px] py-8 md:py-12'>
                 {/* LEFT CONTENT */}
                 <div className='lg:col-span-8 space-y-8 md:space-y-10'>
 
