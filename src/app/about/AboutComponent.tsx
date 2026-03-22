@@ -15,9 +15,9 @@ const AboutComponent = () => {
             <HeroBanner
                 backgroundImage={Banner_Image.src}
                 title="Sydney’s Trusted Timber Flooring Experts"
-                description="With over 20 years of experience, we deliver premium timber flooring solutions for homes, offices, and commercial spaces. Our commitment to craftsmanship and quality ensures beautiful, durable floors that stand the test of time."
+                description="With over 30 years of experience, we deliver premium timber flooring solutions for homes, offices, and commercial spaces. Our commitment to craftsmanship and quality ensures beautiful, durable floors that stand the test of time."
                 points={[
-                    "Over 20 years of trusted craftsmanship",
+                    "Over 30 years of trusted craftsmanship",
                     "High-quality timber flooring solutions",
                     "Expert installation and flawless finishes",
                 ]}

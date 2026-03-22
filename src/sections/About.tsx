@@ -40,7 +40,7 @@ const About = () => {
                 {/* Right Section */}
                 <div className='flex-1' data-aos="fade-left" data-aos-delay="300">
                     <p className='font-inter inter-400 text-base sm:text-md text-[#464646] leading-6 sm:leading-7 md:leading-[25px]'>
-                        Sydney’s trusted timber flooring specialists for over 20 years, delivering
+                        Sydney’s trusted timber flooring specialists for over 30 years, delivering
                         high-quality floors for homes, offices, and commercial spaces. We specialize
                         in the supply, installation, sanding, polishing, staining, and maintenance of
                         all types of timber flooring, including solid timber, engineered and floating

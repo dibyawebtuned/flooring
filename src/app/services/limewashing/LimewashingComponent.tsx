@@ -152,7 +152,7 @@ const LimewashingComponent = () => {
                                             { name: "Flooring Maintenance", link: "/services/flooring-maintenance" },
                                             { name: "Floor Staining", link: "/services/floor-staining" },
                                             { name: "Floating Floor", link: "/services/floating-floor" },
-                                            { name: "Laminate", link: "/services/laminate-flooring" },
+                                            { name: "Laminate", link: "/services/laminate" },
                                             { name: "Parquetry", link: "/services/parquetry" },
                                             { name: "Decking", link: "/services/decking" },
                                             { name: "Noise Reduction", link: "/services/noise-reduction" },

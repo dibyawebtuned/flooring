@@ -7,7 +7,7 @@ export default function Footer() {
     return (
         <footer className="w-full bg-[#e9e7e3] text-[#2b2b2b]">
             <div className="max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px] py-[80px]">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
                     {/* Logo Section */}
                     <div className="flex flex-col gap-5">
@@ -61,7 +61,7 @@ export default function Footer() {
                     </div>
 
                     {/* Newsletter */}
-                    <div className="sm:border-l sm:pl-6 lg:pl-10 border-black/30">
+                    {/* <div className="sm:border-l sm:pl-6 lg:pl-10 border-black/30">
                         <h3 className="text-lg md:text-xl font-semibold mb-4">
                             Sign up to our newsletter
                         </h3>
@@ -83,7 +83,7 @@ export default function Footer() {
                         <p className="text-sm text-gray-600 mt-4 leading-relaxed">
                             Stay updated with the latest timber flooring trends, tips, and exclusive offers.
                         </p>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Bottom Section */}

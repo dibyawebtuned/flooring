@@ -96,7 +96,7 @@ const Hero = () => {
                             data-aos="fade-up"
                             data-aos-delay="500"
                             className="text-start text-[#E6E0D6] text-sm sm:text-base font-medium max-w-full sm:max-w-xl lg:max-w-2xl mb-5 sm:mb-[20px]">
-                            With over 20 years of experience, we specialise exclusively in timber flooring—delivering A1-class
+                            With over 30 years of experience, we specialise exclusively in timber flooring—delivering A1-class
                             workmanship, premium materials, and outstanding customer service across Sydney.
                         </p>
 

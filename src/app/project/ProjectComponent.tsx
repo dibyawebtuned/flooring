@@ -2,37 +2,125 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+
+// Banner
 import Banner_Image from "../../../public/assets/img/bannerimage1.webp";
 
-import Img1 from "../../../public/assets/img/1.jpeg";
-import Img2 from "../../../public/assets/img/2.jpeg";
-import Img3 from "../../../public/assets/img/3.jpeg";
-import Img4 from "../../../public/assets/img/4.jpeg";
-import Img5 from "../../../public/assets/img/5.jpeg";
-import Img6 from "../../../public/assets/img/6.jpeg";
-import Img7 from "../../../public/assets/img/7.jpeg";
-import Img8 from "../../../public/assets/img/8.jpeg";
-import Img9 from "../../../public/assets/img/WhatsApp Image 2026-02-16 at 10.51.36 AM.jpeg";
-import Img10 from "../../../public/assets/img/WhatsApp Image 2026-02-16 at 10.51.59 AM (1).jpeg";
-import Img11 from "../../../public/assets/img/WhatsApp Image 2026-02-16 at 10.51.59 AM.jpeg";
-import Img12 from "../../../public/assets/img/WhatsApp Image 2026-02-16 at 10.52.00 AM.jpeg";
-import Img13 from "../../../public/assets/img/WhatsApp Image 2026-02-16 at 10.52.01 AM.jpeg";
-import Img14 from "../../../public/assets/img/WhatsApp Image 2026-02-16 at 10.52.11 AM.jpeg";
-import Img15 from "../../../public/assets/img/WhatsApp Image 2026-02-16 at 10.52.17 AM.jpeg";
-import Img16 from "../../../public/assets/img/WhatsApp Image 2026-02-16 at 10.52.18 AM (1).jpeg";
-import Img17 from "../../../public/assets/img/WhatsApp Image 2026-02-16 at 10.52.18 AM (2).jpeg";
-import Img18 from "../../../public/assets/img/WhatsApp Image 2026-02-16 at 10.52.18 AM.jpeg";
-import Img19 from "../../../public/assets/img/WhatsApp Image 2026-02-16 at 10.52.33 AM.jpeg";
-import Img20 from "../../../public/assets/img/WhatsApp Image 2026-02-16 at 10.54.19 AM (1).jpeg";
-import Img21 from "../../../public/assets/img/WhatsApp Image 2026-02-16 at 10.54.19 AM.jpeg";
-import Img23 from "../../../public/assets/img/bannerimage1.webp";
-import Img24 from "../../../public/assets/img/bannerimage2.jpg";
-import Img25 from "../../../public/assets/img/bannerimage3.webp";
-
+// Image paths (public folder)
 const items = [
-    Img1, Img2, Img3, Img4, Img5, Img6,
-    Img7, Img8, Img9, Img10, Img11, Img12, Img13, Img14, Img15, Img16, Img17, Img18, Img19, Img20, Img21,
-    Img23, Img24, Img25
+    "/prestige2.0/assets/latest/IMG_1513.JPG",
+    "/prestige2.0/assets/latest/IMG_1521.JPG",
+    "/prestige2.0/assets/latest/IMG_1522.JPG",
+    "/prestige2.0/assets/latest/IMG_1525.JPG",
+    "/prestige2.0/assets/latest/IMG_1527.JPG",
+    "/prestige2.0/assets/latest/IMG_1528.JPG",
+    "/prestige2.0/assets/latest/IMG_1529.JPG",
+    "/prestige2.0/assets/latest/IMG_1531.JPG",
+    "/prestige2.0/assets/latest/IMG_1532.JPG",
+    "/prestige2.0/assets/latest/IMG_1536.JPG",
+    "/prestige2.0/assets/latest/IMG_1559.JPG",
+    "/prestige2.0/assets/latest/IMG_1560.JPG",
+    "/prestige2.0/assets/latest/IMG_1583.JPG",
+    "/prestige2.0/assets/latest/IMG_1614.JPG",
+    "/prestige2.0/assets/latest/IMG_1618.JPG",
+    "/prestige2.0/assets/latest/IMG_1619.JPG",
+    "/prestige2.0/assets/latest/IMG_1620.JPG",
+    "/prestige2.0/assets/latest/IMG_1624.JPG",
+    "/prestige2.0/assets/latest/IMG_1625.JPG",
+    "/prestige2.0/assets/latest/IMG_1627.JPG",
+    "/prestige2.0/assets/latest/IMG_1644.JPG",
+    "/prestige2.0/assets/latest/IMG_1674.JPG",
+    "/prestige2.0/assets/latest/IMG_1676.JPG",
+    "/prestige2.0/assets/latest/IMG_1678.JPG",
+    "/prestige2.0/assets/latest/IMG_1685.JPG",
+    "/prestige2.0/assets/latest/IMG_1698.JPG",
+    "/prestige2.0/assets/latest/IMG_1738.JPG",
+    "/prestige2.0/assets/latest/IMG_1739.JPG",
+    "/prestige2.0/assets/latest/IMG_1742.JPG",
+    "/prestige2.0/assets/latest/IMG_1757.JPG",
+    "/prestige2.0/assets/latest/IMG_1759.JPG",
+    "/prestige2.0/assets/latest/IMG_1760.JPG",
+    "/prestige2.0/assets/latest/IMG_1761.JPG",
+    "/prestige2.0/assets/latest/IMG_1762.JPG",
+    "/prestige2.0/assets/latest/IMG_1765.JPG",
+    "/prestige2.0/assets/latest/IMG_1774.JPG",
+    "/prestige2.0/assets/latest/IMG_1779.JPG",
+    "/prestige2.0/assets/latest/IMG_1782.JPG",
+    "/prestige2.0/assets/latest/IMG_1783.JPG",
+    "/prestige2.0/assets/latest/IMG_1784.JPG",
+    "/prestige2.0/assets/latest/IMG_1786.JPG",
+    "/prestige2.0/assets/latest/IMG_1788.JPG",
+    "/prestige2.0/assets/latest/IMG_1792.JPG",
+    "/prestige2.0/assets/latest/IMG_1799.JPG",
+    "/prestige2.0/assets/latest/IMG_1800.JPG",
+    "/prestige2.0/assets/latest/IMG_1801.JPG",
+    "/prestige2.0/assets/latest/IMG_1802.JPG",
+    "/prestige2.0/assets/latest/IMG_1803.JPG",
+    "/prestige2.0/assets/latest/IMG_1804.JPG",
+    "/prestige2.0/assets/latest/IMG_1805.JPG",
+    "/prestige2.0/assets/latest/IMG_1806.JPG",
+    "/prestige2.0/assets/latest/IMG_1807.JPG",
+    "/prestige2.0/assets/latest/IMG_1809.JPG",
+    "/prestige2.0/assets/latest/IMG_1810.JPG",
+    "/prestige2.0/assets/latest/IMG_1816.JPG",
+    "/prestige2.0/assets/latest/IMG_1819.JPG",
+    "/prestige2.0/assets/latest/IMG_1820.JPG",
+    "/prestige2.0/assets/latest/IMG_1821.JPG",
+    "/prestige2.0/assets/latest/IMG_1822.JPG",
+    "/prestige2.0/assets/latest/IMG_1823.JPG",
+    "/prestige2.0/assets/latest/IMG_1825.JPG",
+    "/prestige2.0/assets/latest/IMG_1831.JPG",
+    "/prestige2.0/assets/latest/IMG_1837.JPG",
+    "/prestige2.0/assets/latest/IMG_1838.JPG",
+    "/prestige2.0/assets/latest/IMG_1840.JPG",
+    "/prestige2.0/assets/latest/IMG_1841.JPG",
+    "/prestige2.0/assets/latest/IMG_1844.JPG",
+    "/prestige2.0/assets/latest/IMG_1847.JPG",
+    "/prestige2.0/assets/latest/IMG_1848.JPG",
+    "/prestige2.0/assets/latest/IMG_1849.JPG",
+    "/prestige2.0/assets/latest/IMG_1850.JPG",
+    "/prestige2.0/assets/latest/IMG_1851.JPG",
+    "/prestige2.0/assets/latest/IMG_1852.JPG",
+    "/prestige2.0/assets/latest/IMG_1853.JPG",
+    "/prestige2.0/assets/latest/IMG_1855.JPG",
+    "/prestige2.0/assets/latest/IMG_1868.JPG",
+    "/prestige2.0/assets/latest/IMG_1869.JPG",
+    "/prestige2.0/assets/latest/IMG_1870.JPG",
+    "/prestige2.0/assets/latest/IMG_1871.JPG",
+    "/prestige2.0/assets/latest/IMG_1872.JPG",
+    "/prestige2.0/assets/latest/IMG_1873.JPG",
+    "/prestige2.0/assets/latest/IMG_1874.JPG",
+    "/prestige2.0/assets/latest/IMG_1875.JPG",
+    "/prestige2.0/assets/latest/IMG_1876.JPG",
+    "/prestige2.0/assets/latest/IMG_1877.JPG",
+    "/prestige2.0/assets/latest/IMG_1878.JPG",
+    "/prestige2.0/assets/latest/IMG_1879.JPG",
+    "/prestige2.0/assets/latest/IMG_1880.JPG",
+
+    "/prestige2.0/assets/img/1.jpeg",
+    "/prestige2.0/assets/img/2.jpeg",
+    "/prestige2.0/assets/img/3.jpeg",
+    "/prestige2.0/assets/img/4.jpeg",
+    "/prestige2.0/assets/img/5.jpeg",
+    "/prestige2.0/assets/img/6.jpeg",
+    "/prestige2.0/assets/img/7.jpeg",
+    "/prestige2.0/assets/img/8.jpeg",
+    "/prestige2.0/assets/img/WhatsApp Image 2026-02-16 at 10.51.36 AM.jpeg",
+    "/prestige2.0/assets/img/WhatsApp Image 2026-02-16 at 10.51.59 AM (1).jpeg",
+    "/prestige2.0/assets/img/WhatsApp Image 2026-02-16 at 10.51.59 AM.jpeg",
+    "/prestige2.0/assets/img/WhatsApp Image 2026-02-16 at 10.52.00 AM.jpeg",
+    "/prestige2.0/assets/img/WhatsApp Image 2026-02-16 at 10.52.01 AM.jpeg",
+    "/prestige2.0/assets/img/WhatsApp Image 2026-02-16 at 10.52.11 AM.jpeg",
+    "/prestige2.0/assets/img/WhatsApp Image 2026-02-16 at 10.52.17 AM.jpeg",
+    "/prestige2.0/assets/img/WhatsApp Image 2026-02-16 at 10.52.18 AM (1).jpeg",
+    "/prestige2.0/assets/img/WhatsApp Image 2026-02-16 at 10.52.18 AM (2).jpeg",
+    "/prestige2.0/assets/img/WhatsApp Image 2026-02-16 at 10.52.18 AM.jpeg",
+    "/prestige2.0/assets/img/WhatsApp Image 2026-02-16 at 10.52.33 AM.jpeg",
+    "/prestige2.0/assets/img/WhatsApp Image 2026-02-16 at 10.54.19 AM (1).jpeg",
+    "/prestige2.0/assets/img/WhatsApp Image 2026-02-16 at 10.54.19 AM.jpeg",
+    "/prestige2.0/assets/img/bannerimage1.webp",
+    "/prestige2.0/assets/img/bannerimage2.jpg",
+    "/prestige2.0/assets/img/bannerimage3.webp",
 ];
 
 const ProjectComponent = () => {
@@ -48,9 +136,7 @@ const ProjectComponent = () => {
 
     const showPrev = () => {
         if (selectedIndex !== null) {
-            setSelectedIndex(
-                (selectedIndex - 1 + items.length) % items.length
-            );
+            setSelectedIndex((selectedIndex - 1 + items.length) % items.length);
         }
     };
 
@@ -68,7 +154,6 @@ const ProjectComponent = () => {
 
     return (
         <div>
-
             {/* ================= HERO SECTION ================= */}
             <section className="relative w-full h-[45vh] sm:h-[50vh] min-h-[380px] flex items-end">
                 <div className="absolute inset-0">
@@ -85,8 +170,7 @@ const ProjectComponent = () => {
 
                 <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 w-full pb-10">
                     <div className="grid lg:grid-cols-2 gap-8 items-end">
-                        <h1 className="text-white font-bold leading-tight 
-              text-2xl sm:text-3xl md:text-4xl lg:text-[46px]">
+                        <h1 className="text-white font-bold leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-[46px]">
                             Crafting Premium Timber Floors with Precision
                         </h1>
 
@@ -102,7 +186,7 @@ const ProjectComponent = () => {
                 </div>
             </section>
 
-            {/* ================= GRID GALLERY (PLANE) ================= */}
+            {/* ================= GRID GALLERY ================= */}
             <section className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 py-16">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {items.map((img, index) => (
@@ -117,9 +201,9 @@ const ProjectComponent = () => {
                                 fill
                                 className="object-cover hover:scale-105 transition duration-300"
                                 sizes="(max-width: 640px) 100vw,
-                                       (max-width: 1024px) 50vw,
-                                       (max-width: 1280px) 33vw,
-                                       25vw"
+                       (max-width: 1024px) 50vw,
+                       (max-width: 1280px) 33vw,
+                       25vw"
                             />
                         </div>
                     ))}
@@ -133,13 +217,14 @@ const ProjectComponent = () => {
                     onClick={closeLightbox}
                 >
                     <div
-                        className="relative max-w-6xl w-full"
+                        className="relative w-full max-w-6xl h-[85vh]"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <Image
                             src={items[selectedIndex]}
                             alt="Preview"
-                            className="w-full h-auto object-contain max-h-[85vh]"
+                            fill
+                            className="object-contain"
                         />
 
                         {/* Close Button */}

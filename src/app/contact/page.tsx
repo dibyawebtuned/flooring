@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: " Contact | Prestige Timber Flooring",
     description:
-        "Sydney’s trusted timber flooring specialists for over 20 years, delivering high-quality floors for homes, offices, and commercial spaces. We specialize in the supply, installation, sanding, polishing, staining, and maintenance",
+        "Sydney’s trusted timber flooring specialists for over 30 years, delivering high-quality floors for homes, offices, and commercial spaces. We specialize in the supply, installation, sanding, polishing, staining, and maintenance",
 
     authors: [{ name: "Prestige Timber Flooring" }],
     creator: "Prestige Timber Flooring",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Prestige Timber Flooring",
         description:
-            "Sydney’s trusted timber flooring specialists for over 20 years, delivering high-quality floors for homes, offices, and commercial spaces. We specialize in the supply, installation, sanding, polishing, staining, and maintenance",
+            "Sydney’s trusted timber flooring specialists for over 30 years, delivering high-quality floors for homes, offices, and commercial spaces. We specialize in the supply, installation, sanding, polishing, staining, and maintenance",
         siteName: "Prestige Timber Flooring",
         images: [
             {

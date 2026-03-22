@@ -2,35 +2,56 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Logo from "../../../public/assets/img/Logo.png";
+import ScrollLogo from "../../../public/assets/img/footer_logo.png";
 import { ChevronDown, Phone, Mail, Send, Menu, X, Square, Hammer, Layers, Wrench, Paintbrush, LayoutGrid, Grid2x2, Volume2, Trees, Brush, Layers3, Trophy } from "lucide-react";
 
 // Extracted services data for cleaner mapping and easy responsive layout
 const servicesCol1 = [
-    { name: "Solid Timber flooring", desc: "This residential project features premium Blackbutt solid timber flooring", icon: Square, href: "/services/solid-timber-flooring" },
+    // One
+    { name: "Installation", desc: "This residential project features premium Blackbutt solid timber flooring", icon: Square, href: "/services/installation" },
+    // Two
     { name: "Floor Sanding & Polishing", desc: "Restore and refine your floors with professional sanding and polishing.", icon: Hammer, href: "/services/floor-sanding-polishing" },
-    { name: "Floor Preparation & Levelling", desc: "Ensure a smooth, stable foundation with professional floor preparation.", icon: Layers, href: "/services/floor-preparation-levelling" },
-    { name: "Flooring Maintenance", desc: "Keep your floors looking their best with routine maintenance.", icon: Wrench, href: "/services/flooring-maintenance" },
+    // Three
     { name: "Floor Staining", desc: "Enhance and protect your floors with professional staining that adds rich color.", icon: Paintbrush, href: "/services/floor-staining" },
-    { name: "Floating Floor", desc: "We ensure your sub-floor, whether concrete or timber, is perfectly level.", icon: LayoutGrid, href: "/services/floating-floor" },
-    { name: "Laminate", desc: "Laminate flooring offers a durable, wear-resistant surface ideal for busy homes.", icon: Square, href: "/services/laminate" },
+    // Four
+    { name: "Limewashing", desc: "Create a soft, contemporary finish with limewashed timber floors.", icon: Brush, href: "/services/limewashing" },
+    // Five
+    { name: "Solid Tongue and Groove Flooring", desc: "This residential project features premium Blackbutt solid timber flooring", icon: Square, href: "/services/solid-timber-flooring" },
+    // Six
+    { name: "Parquetry", desc: "Add timeless elegance with expertly installed parquetry flooring.", icon: LayoutGrid, href: "/services/parquetry" },
 ];
 
 const servicesCol2 = [
-    { name: "Parquetry", desc: "Add timeless elegance with expertly installed parquetry flooring.", icon: LayoutGrid, href: "/services/parquetry" },
-    { name: "Decking", desc: "Enhance your outdoor spaces with beautiful timber decking.", icon: Grid2x2, href: "/services/decking" },
-    { name: "Noise Reduction", desc: "Improve comfort and acoustics with flooring solutions designed to reduce noise.", icon: Volume2, href: "/services/noise-reduction" },
-    { name: "Blackbutt timber floors", desc: "Achieve a warm, natural look with Blackbutt timber flooring.", icon: Trees, href: "/services/blackbutt-timber-floors" },
-    { name: "Limewashing", desc: "Create a soft, contemporary finish with limewashed timber floors.", icon: Brush, href: "/services/limewashing" },
+    // Seven
+    { name: "Engineered Flooring", desc: "Add timeless elegance with expertly installed parquetry flooring.", icon: LayoutGrid, href: "/services/parquetry" },
+    // Eight
     { name: "Hybrid Flooring", desc: "Enjoy the look of timber with the durability of advanced hybrid flooring.", icon: Layers3, href: "/services/hybrid-flooring" },
+    // Nine
+    { name: "Laminate", desc: "Laminate flooring offers a durable, wear-resistant surface ideal for busy homes.", icon: Square, href: "/services/laminate" },
+    // Ten
+    { name: "Decking", desc: "Enhance your outdoor spaces with beautiful timber decking.", icon: Grid2x2, href: "/services/decking" },
+    // Eleven
     { name: "Sprung Sports Floors", desc: "Deliver performance and safety with professionally installed sprung sports floors.", icon: Trophy, href: "/services/sprung-sports-floors" },
+    // Twelve
+    { name: "Flooring Maintenance", desc: "Keep your floors looking their best with routine maintenance.", icon: Wrench, href: "/services/flooring-maintenance" },
 ];
 
 export default function Navbar() {
     const [openDesktop, setOpenDesktop] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 50);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     const closeMobileMenu = () => {
         setIsMobileMenuOpen(false);
@@ -38,25 +59,61 @@ export default function Navbar() {
     };
 
     return (
-        <header className="absolute top-0 left-0 w-full z-50 text-white">
+        <header
+            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
+                ? "bg-white shadow-lg text-black"
+                : "bg-transparent text-white"
+                }`}
+        >
             <div className="max-w-[1440px] mx-auto px-4 sm:px-[40px] xl:px-[80px] h-20 md:h-24 flex items-center justify-between">
-                {/* LOGO */}
-                <Link href="/" className="w-[180px] md:w-[226px] h-auto" onClick={closeMobileMenu}>
-                    <Image src={Logo} alt="Company Logo" width={226} height={53} priority className="w-full h-auto" />
+
+                {/* LOGO WITH SMOOTH FADE SWITCH */}
+                <Link
+                    href="/"
+                    className="relative w-[180px] md:w-[226px] h-[53px]"
+                    onClick={closeMobileMenu}
+                >
+                    {/* Default Logo (Top of page) */}
+                    <Image
+                        src={Logo}
+                        alt="Company Logo"
+                        fill
+                        priority
+                        className={`object-contain transition-opacity duration-300 ${isScrolled ? "opacity-0" : "opacity-100"
+                            }`}
+                    />
+
+                    {/* Scrolled Logo */}
+                    <Image
+                        src={ScrollLogo}
+                        alt="Company Logo"
+                        fill
+                        priority
+                        className={`object-contain transition-opacity duration-300 ${isScrolled ? "opacity-100" : "opacity-0"
+                            }`}
+                    />
                 </Link>
 
                 {/* DESKTOP NAVIGATION */}
-                <nav className="hidden lg:flex items-center gap-8 text-[16px] text-[#F6F4EF] relative">
-                    <Link href="/" className="hover:text-gray-300 transition-colors">Home</Link>
+                <nav className="hidden lg:flex items-center gap-8 text-[16px] relative">
+                    <Link href="/" className="hover:opacity-70 transition-opacity">
+                        Home
+                    </Link>
 
-                    {/* Desktop Services Dropdown */}
-                    <div className="relative group"
+                    {/* Services Dropdown */}
+                    <div
+                        className="relative group"
                         onMouseEnter={() => setOpenDesktop(true)}
-                        onMouseLeave={() => setOpenDesktop(false)}>
-                        <div className="flex items-center gap-1 cursor-pointer hover:text-gray-300 transition-colors py-2">
+                        onMouseLeave={() => setOpenDesktop(false)}
+                    >
+                        <div className="flex items-center gap-1 cursor-pointer py-2">
                             <span>Services</span>
-                            <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${openDesktop ? "rotate-180" : ""}`} />
+                            <ChevronDown
+                                className={`w-4 h-4 transition-transform duration-300 ${openDesktop ? "rotate-180" : ""
+                                    }`}
+                            />
                         </div>
+
 
                         {/* Dropdown Menu */}
                         <div
@@ -91,34 +148,54 @@ export default function Navbar() {
                         </div>
                     </div>
 
-                    <Link href="/about" className="hover:text-gray-300 transition-colors">About</Link>
-                    <Link href="/project" className="hover:text-gray-300 transition-colors">Projects</Link>
-                    <Link href="/contact" className="hover:text-gray-300 transition-colors">Contact</Link>
+                    <Link href="/about" className="hover:opacity-70 transition-opacity">
+                        About
+                    </Link>
+                    <Link href="/project" className="hover:opacity-70 transition-opacity">
+                        Projects
+                    </Link>
+                    <Link href="/contact" className="hover:opacity-70 transition-opacity">
+                        Contact
+                    </Link>
                 </nav>
 
-                {/* DESKTOP RIGHT SIDE CONTACT */}
+                {/* DESKTOP RIGHT SIDE */}
                 <div className="hidden lg:flex items-center gap-6 text-[16px]">
-                    <Link href="tel:0414645200" className="flex items-center gap-2 hover:text-gray-300 transition-colors">
+                    <Link
+                        href="tel:0414645200"
+                        className="flex items-center gap-2 hover:opacity-70 transition-opacity"
+                    >
                         <Phone className="w-4 h-4" />
                         0414 645 200
                     </Link>
 
                     <div className="flex gap-2">
-                        <a href="mailto:info@prestigetimber.com" className="w-9 h-9 border border-white/50 hover:border-white hover:bg-white/10 transition-all rounded flex items-center justify-center">
+                        <a
+                            href="mailto:info@prestigetimber.com"
+                            className="w-9 h-9 border border-current/40 hover:bg-current/10 transition-all rounded flex items-center justify-center"
+                        >
                             <Mail className="w-4 h-4" />
                         </a>
-                        <Link href="/contact" className="w-9 h-9 border border-white/50 hover:border-white hover:bg-white/10 transition-all rounded flex items-center justify-center">
+                        <Link
+                            href="/contact"
+                            className="w-9 h-9 border border-current/40 hover:bg-current/10 transition-all rounded flex items-center justify-center"
+                        >
                             <Send className="w-4 h-4" />
                         </Link>
                     </div>
                 </div>
 
-                {/* MOBILE MENU TOGGLE BUTTON */}
+                {/* MOBILE MENU BUTTON */}
                 <button
-                    className="lg:hidden p-2 text-white hover:bg-white/10 rounded-md transition-colors"
+                    className="lg:hidden p-2 hover:bg-current/10 rounded-md transition-colors"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    aria-label="Toggle Menu">
-                    {isMobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+                    aria-label="Toggle Menu"
+                >
+                    {isMobileMenuOpen ? (
+                        <X className="w-7 h-7" />
+                    ) : (
+                        <Menu className="w-7 h-7" />
+                    )}
                 </button>
             </div>
 

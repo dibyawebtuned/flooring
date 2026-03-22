@@ -10,7 +10,7 @@ import "aos/dist/aos.css";
 const testimonials = [
     {
         quote:
-            "With over 20 years of experience, it really shows in their work. The team handled everything from preparation to polishing with precision. We couldn’t be happier with the final result.",
+            "With over 30 years of experience, it really shows in their work. The team handled everything from preparation to polishing with precision. We couldn’t be happier with the final result.",
         name: "Commercial Client",
         location: "Sydney",
     },

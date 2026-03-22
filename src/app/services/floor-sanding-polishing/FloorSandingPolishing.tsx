@@ -23,7 +23,6 @@ const FloorSandingPolishing = () => {
 
             <section className='max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-20 py-8 md:py-12'>
                 <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10'>
-
                     {/* LEFT CONTENT */}
                     <div className='lg:col-span-8 space-y-8 md:space-y-10'>
 
@@ -150,7 +149,7 @@ const FloorSandingPolishing = () => {
                                             { name: "Flooring Maintenance", link: "/services/flooring-maintenance" },
                                             { name: "Floor Staining", link: "/services/floor-staining" },
                                             { name: "Floating Floor", link: "/services/floating-floor" },
-                                            { name: "Laminate", link: "/services/laminate-flooring" },
+                                            { name: "Laminate", link: "/services/laminate" },
                                             { name: "Parquetry", link: "/services/parquetry" },
                                             { name: "Decking", link: "/services/decking" },
                                             { name: "Noise Reduction", link: "/services/noise-reduction" },

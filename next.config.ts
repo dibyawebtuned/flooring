@@ -15,6 +15,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
+  // basePath: "/prestige2.0",
+  // assetPrefix: "/prestige2.0/",
   basePath: "",
   assetPrefix: "",
   images: {
